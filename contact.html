@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Guru Kripa Printers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">...</header>
+
+    <main>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Details</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Barkhedi ,Near Jhangirabad Bhopal (M.P)</p>
+                <p><i class="fas fa-phone-alt"></i> +91 9827268725</p>
+                <p><i class="fas fa-envelope"></i> rakeshyagyik77@gmail.com</p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/9827268725" target="_blank">Chat on WhatsApp</a></p>
+            </div>
+            
+            <div class="contact-form" id="quote-form">
+                <h3>Get a Quote or Ask a Question</h3>
+                <form action="submit_form.php" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <section class="contact-map">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.830623696884!2d77.31908611508216!3d28.571932382438515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb1e4c9f1a35%3A0x8e5f8f9e7c5b3c6!2sGuru%20Kripa%20Printers!5e0!3m2!1sen!2sin!4v1694503957297!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <footer class="footer">...</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
