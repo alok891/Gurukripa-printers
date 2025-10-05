@@ -336,59 +336,51 @@ p {
     margin-right: 0;
 }
 
-/* Gallery Page Specific */
+/* Gallery Page Specific - FINAL CODE */
 
 .gallery-section {
-    padding: 4rem 2rem;
-    background-color: #f9f9f9; /* Ek halka background color gallery section ke liye */
+    /* Side ka space kam kiya gaya hai */
+    padding: 3rem 1rem; 
+    background-color: #f9f9f9; 
 }
 
 .gallery-grid {
     display: grid;
-    /* Responsive columns: Minimum 300px width, 1fr ka matlab available space fill karega */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem; /* Boxes ke beech mein space */
-    justify-items: center; /* Items ko center align karein */
-    align-items: center; /* Items ko vertically center align karein */
+    /* Images teen-teen ke set mein aayengi (320px minimum size) */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 1.5rem; /* Boxes ke beech ka space */
+    justify-items: center; 
+    align-items: center; 
 }
 
 .gallery-item {
-    position: relative;
-    height: 250px; /* 👈 Har box ki fixed height */
-    width: 100%; /* Box ki width grid column ke barabar */
-    overflow: hidden; /* Box se bahar nikla hua content chhup jayega */
+    /* Height fix ki gayi aur image ko center mein laane ki setting */
+    position: relative; 
+    height: 250px; /* 👈 Har box ki uniform height */
+    width: 100%; 
+    overflow: hidden; 
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Thoda gehra shadow */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #ffffff; /* 👈 Yeh zaroori hai: Photo ke aas-paas white background */
-    display: flex; /* Flexbox ka istemal image ko center karne ke liye */
-    justify-content: center; /* Image ko horizontally center karein */
-    align-items: center; /* Image ko vertically center karein */
+    background-color: #ffffff; /* Image ke aas-paas white background */
+    display: flex; /* Image ko center mein karne ke liye */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px) scale(1.02); /* Thoda upar uthe aur enlarge ho */
+    transform: translateY(-5px) scale(1.02); 
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 .gallery-item img {
-    /* Image ko box ke andar fit karein bina kate */
-    max-width: 100%; /* Image ki max width box ke barabar */
-    max-height: 100%; /* Image ki max height box ke barabar */
-    width: auto; /* Image ki original width ko maintain karein */
-    height: auto; /* Image ki original height ko maintain karein */
-    object-fit: contain; /* 👈 Sabse Zaroori: Image ko bina kate box mein fit karein */
-    display: block; /* Display block zaroori hai */
-    /* Agar aap transition chahte hain jab image hover kare ya load ho */
-    /* transition: transform 0.3s ease-out; */ 
-}
-
-/* Optional: Agar aap ek heading dena chahte hain gallery section ko */
-.gallery-section h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-    color: #333;
+    /* Images ko bina kate box mein fit kiya jaayega */
+    max-width: 100%; /* 👉 Image ki maximum width box ke barabar */
+    max-height: 100%; /* 👉 Image ki maximum height box ke barabar */
+    width: auto; 
+    height: auto; 
+    object-fit: contain; /* 👈 Yeh ensure karega ki image cut na ho */
+    display: block;
 }
 /* Contact Page Specific */
 .contact-container {
@@ -512,6 +504,7 @@ p {
     }
 
 }
+
 
 
 
