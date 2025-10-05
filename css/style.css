@@ -90,6 +90,9 @@ p {
 .hero-section {
     background: url('../images/hero-banner1.jpg') no-repeat center center/cover;
     color: #fff;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.9), /* Pehla shadow: dark and clear */
+        0 0 10px rgba(255, 255, 255, 0.5);
     text-align: center;
     padding: 100px 20px;
     position: relative;
@@ -504,6 +507,7 @@ p {
     }
 
 }
+
 
 
 
