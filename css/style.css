@@ -337,6 +337,15 @@ p {
 }
 
 /* Gallery Page Specific */
+img {
+        max-width: 100%; /* Image ko uske container ki width ke hisaab se adjust karega */
+        height: auto;    /* Height ko proportionally adjust karega, taaki cut na ho */
+        display: block;  /* Agar image block element ho toh better control milta hai */
+        object-fit: contain; /* Agar image cut rahi hai toh yeh use poora dikhane ki koshish karega */
+        /* object-fit: cover; agar aap chahte hain ki image container ko poora bhare, bhale hi cut ho */
+        /* margin: 0 auto; agar aap image ko center karna chahte hain */
+    }
+
 .gallery-section {
     padding: 4rem 2rem;
 }
@@ -485,4 +494,5 @@ p {
     .service-card img, .service-card.reverse img {
         margin: 0 0 1rem 0;
     }
+
 }
