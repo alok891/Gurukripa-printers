@@ -88,7 +88,7 @@ p {
 
 /* Hero Section */
 .hero-section {
-    background: url('../images/hero-banner.jpg') no-repeat center center/cover;
+    background: url('../images/hero-banner1.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
@@ -504,6 +504,7 @@ p {
     }
 
 }
+
 
 
 
