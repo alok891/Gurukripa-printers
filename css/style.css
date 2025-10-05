@@ -337,36 +337,58 @@ p {
 }
 
 /* Gallery Page Specific */
-/* Gallery Page Specific */
+
 .gallery-section {
     padding: 4rem 2rem;
+    background-color: #f9f9f9; /* Ek halka background color gallery section ke liye */
 }
 
 .gallery-grid {
-    /* Grid code theek hai */
     display: grid;
+    /* Responsive columns: Minimum 300px width, 1fr ka matlab available space fill karega */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem; /* Boxes ke beech mein space */
+    justify-items: center; /* Items ko center align karein */
+    align-items: center; /* Items ko vertically center align karein */
 }
 
 .gallery-item {
-    /* Height ko control karne ke liye fixed height denge */
-    overflow: hidden;
-    height: 250px; /* 👈 Yahan ek fixed height set karein */
+    position: relative;
+    height: 250px; /* 👈 Har box ki fixed height */
+    width: 100%; /* Box ki width grid column ke barabar */
+    overflow: hidden; /* Box se bahar nikla hua content chhup jayega */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Thoda gehra shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff; /* 👈 Yeh zaroori hai: Photo ke aas-paas white background */
+    display: flex; /* Flexbox ka istemal image ko center karne ke liye */
+    justify-content: center; /* Image ko horizontally center karein */
+    align-items: center; /* Image ko vertically center karein */
 }
 
 .gallery-item:hover {
-    transform: scale(1.03);
+    transform: translateY(-5px) scale(1.02); /* Thoda upar uthe aur enlarge ho */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 100%; /* Image ko item ki height ke barabar set karein */
-    object-fit: cover; /* 👈 Yeh ensure karega ki poora box fill ho, bhale hi image cut ho */
-    display: block;
+    /* Image ko box ke andar fit karein bina kate */
+    max-width: 100%; /* Image ki max width box ke barabar */
+    max-height: 100%; /* Image ki max height box ke barabar */
+    width: auto; /* Image ki original width ko maintain karein */
+    height: auto; /* Image ki original height ko maintain karein */
+    object-fit: contain; /* 👈 Sabse Zaroori: Image ko bina kate box mein fit karein */
+    display: block; /* Display block zaroori hai */
+    /* Agar aap transition chahte hain jab image hover kare ya load ho */
+    /* transition: transform 0.3s ease-out; */ 
+}
+
+/* Optional: Agar aap ek heading dena chahte hain gallery section ko */
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #333;
 }
 /* Contact Page Specific */
 .contact-container {
@@ -490,6 +512,7 @@ p {
     }
 
 }
+
 
 
 
