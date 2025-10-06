@@ -505,6 +505,34 @@ p {
     }
 
 }
+/* * MOBILE RESPONSIVENESS FIX (Phones aur Tablets ke liye) */
+@media (max-width: 768px) {
+    
+    /* Hero Section: Padding aur Font Size kam karna */
+    .hero-section {
+        padding: 80px 10px; /* Upar/neeche aur side ka space kam kiya */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem; /* Badi heading ko chhota karna */
+    }
+    
+    /* GALLERY SECTION: Grid aur Padding ko theek karna */
+    .gallery-section {
+        padding: 2rem 0.5rem; /* Side ka padding aur kam kiya */
+    }
+
+    .gallery-grid {
+        /* Chhote phones ke liye min width ko 280px kiya */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem; /* Items ke beech ka gap kam kiya */
+    }
+
+    .gallery-item {
+        height: 200px; /* Gallery box ki height thodi kam ki */
+    }
+}
+
 
 
 
