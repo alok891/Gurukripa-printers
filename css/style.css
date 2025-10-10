@@ -95,9 +95,21 @@ p {
     transition: color 0.3s ease;
 }
 
+.navbar a {
+    color: var(--heading-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    display: inline-block;
+}
+
 .navbar a:hover {
     color: var(--primary-color);
+    text-decoration: none;
 }
+
 
 .menu-toggle {
     display: none;
@@ -551,6 +563,7 @@ p {
         height: 200px; /* Gallery box ki height thodi kam ki */
     }
 }
+
 
 
 
