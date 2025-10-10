@@ -64,21 +64,9 @@ p {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color); /* <-- REVERTED TO ORIGINAL COLOR */
+    color: var(--primary-color);
     text-decoration: none;
 }
-
-/* --- LOGO IMAGE STYLES (REQUIRED FOR IMAGE SIZE) --- */
-.logo .logo-img {
-    /* Set the logo height. Adjust this value (e.g., 50px, 70px) if the logo is too small or too big */
-    height: 60px; 
-    /* Maintains the correct width-to-height ratio */
-    width: auto; 
-    /* Display the image correctly */
-    display: block; 
-}
-/* --------------------------------------------------- */
-
 
 .navbar a {
     color: var(--heading-color);
@@ -544,3 +532,9 @@ p {
         height: 200px; /* Gallery box ki height thodi kam ki */
     }
 }
+
+
+
+
+
+
