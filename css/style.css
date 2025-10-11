@@ -125,7 +125,7 @@ p {
 
 .hero-section {
     /* Background Image ko theek kiya */
-    background: url('../images/banner-icon.png') no-repeat center center/cover; 
+    background: url('../images/hero-banner1.jpb') no-repeat center center/cover; 
     color: #fff;
     text-align: center;
     padding: 180px 20px; 
@@ -636,6 +636,7 @@ p {
         height: 200px;
     }
 }
+
 
 
 
