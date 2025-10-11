@@ -121,40 +121,97 @@ p {
 
 
 /* Hero Section */
-/* Hero Content and Buttons Styles (PURANA JAISA KARNE KE LIYE) */
+/* Hero Section */
+
+.hero-section {
+    /* Background Image ko theek kiya */
+    background: url('../images/banner-icon.png') no-repeat center center/cover; 
+    color: #fff;
+    text-align: center;
+    padding: 180px 20px; 
+    position: relative;
+    min-height: 80vh; 
+}
+
+/* Dark Overlay */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Thoda halka dark overlay */
+    z-index: 1;
+}
 
 .hero-content {
-    /* ... baki styles (position, z-index, text-shadow) same rahenge ... */
     position: relative;
     z-index: 2;
     max-width: 900px;
     margin: 0 auto;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .hero-content h1 {
-    /* Purana size chota tha, agar isko aur chota karna hai toh */
-    font-size: 5.5rem; /* Aapke purane code se liya gaya size */
-    margin-bottom: 0.5rem;
+    font-size: 72px; /* Desktop Heading Size */
+    font-weight: 800;
+    margin-bottom: 10px;
     color: #fff; 
 }
 
 .tagline {
-    font-size: 1.25rem; /* Purana size */
-    font-weight: 800; /* Purana weight */
-    margin-bottom: 2rem;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 40px;
 }
 
-/* Button Container ko purana jaisa center alignment mein rakha */
+/* --- Buttons Styles (Image 2 Look: Blue/White) --- */
+
 .hero-buttons {
-    text-align: center; 
     margin-top: 2rem;
+    text-align: center; 
 }
 
-/* Buttons ka spacing bhi purana jaisa kiya */
-.btn-whatsapp, .btn-contact {
-    margin: 0 0.5rem; /* Side mein thoda space diya */
+.btn {
+    display: inline-block;
+    padding: 14px 30px; 
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent; 
+    cursor: pointer;
+    margin: 0 15px; /* Buttons ke beech space */
 }
+
+/* 1. Primary/WhatsApp Button (Blue) */
+.btn-primary { 
+    background-color: #007bff; /* Bright Blue */
+    color: #fff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* 2. Secondary/Contact Us Button (White) */
+.btn-secondary {
+    background-color: #fff;
+    color: #212529; 
+    border-color: #fff; 
+}
+
+.btn-secondary:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+
+/* Services Overview on Homepage */
 
 /* Services Overview on Homepage */
 .services-overview {
@@ -519,41 +576,50 @@ p {
 
 }
 /* * MOBILE RESPONSIVENESS FIX (Phones aur Tablets ke liye) */
+/* * MOBILE RESPONSIVENESS FIX (Phones aur Tablets ke liye) */
 @media (max-width: 768px) {
-    /* ... baki responsive styles same rahenge ... */
+    /* ... baki responsive styles jaari rakhein ... */
 
-    /* Hero Section Responsiveness (PURANA JAISA) */
+    /* Hero Section Responsiveness (FINAL FIX) */
     .hero-section {
-        padding: 100px 15px;
-        min-height: 60vh; 
+        padding: 80px 15px; 
+        min-height: 50vh;
     }
 
     .hero-content h1 {
-        font-size: 2.5rem; /* Purana size */
+        font-size: 40px; /* Thoda bada size mobile ke liye */
         margin-bottom: 5px;
     }
 
     .tagline {
-        font-size: 1.25rem;
-        margin-bottom: 30px;
+        font-size: 16px;
+        margin-bottom: 20px;
     }
 
     /* Buttons ko side-by-side aur center mein rakha */
     .hero-buttons {
-        /* Mobile par buttons ko stack nahi karna hai (jaisa aap chahte hain) */
-        display: block; 
+        text-align: center;
     }
 
     .btn {
-        /* Buttons ka size aur margin mobile ke liye chota kiya */
         padding: 10px 20px;
         font-size: 1rem;
-        /* Mobile par buttons ko inline-block rakha (side-by-side) */
-        display: inline-block; 
         margin: 5px; 
     }
     
-    
+    /* GALLERY SECTION: Grid aur Padding ko theek karna */
+    .gallery-section {
+        padding: 2rem 0.5rem; 
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem; 
+    }
+
+    .gallery-item {
+        height: 200px;
+    }
 }
     
     /* GALLERY SECTION: Grid aur Padding ko theek karna */
@@ -570,6 +636,7 @@ p {
         height: 200px;
     }
 }
+
 
 
 
