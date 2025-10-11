@@ -484,6 +484,28 @@ p {
 }
 
 /* Responsive Design */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* hide hamburger on desktop */
+    }
+
+    .navbar {
+        display: flex !important; /* show menu horizontally */
+        justify-content: flex-end; /* align menu to right */
+        flex-direction: row;
+        position: static; /* remove absolute */
+        background: transparent; /* remove white background */
+        box-shadow: none; /* remove shadow */
+        padding: 0;
+        width: auto;
+    }
+
+    .navbar a {
+        margin-left: 2rem; /* spacing between links */
+        display: inline-block;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         display: none;
@@ -501,13 +523,10 @@ p {
         display: flex;
     }
 
-    .navbar a {
-        margin: 0.5rem 2rem;
-    }
-
     .menu-toggle {
         display: block;
     }
+}
 
     .hero-content h1 {
         font-size: 2.5rem;
@@ -566,6 +585,7 @@ p {
         height: 200px; /* Gallery box ki height thodi kam ki */
     }
 }
+
 
 
 
