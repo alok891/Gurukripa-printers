@@ -112,10 +112,13 @@ p {
 
 
 .menu-toggle {
-    display: none;
+    display: block; /* already mobile me visible */
     font-size: 1.5rem;
     cursor: pointer;
+    position: relative;
+    z-index: 1001;
 }
+
 
 /* Hero Section */
 .hero-section {
@@ -563,6 +566,7 @@ p {
         height: 200px; /* Gallery box ki height thodi kam ki */
     }
 }
+
 
 
 
