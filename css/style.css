@@ -121,79 +121,100 @@ p {
 
 
 /* Hero Section */
+/* Hero Section (UPDATED) */
 .hero-section {
+    /* Background settings same rakhe, bas padding badhaya */
+    /* Aapka background image hero-banner1.jpg CSS se aa raha hai */
     background: url('../images/hero-banner1.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    font:imapact;
-    padding: 100px 20px;
+    padding: 180px 20px; /* Desktop ke liye zyada padding */
     position: relative;
 }
 
 .hero-section::before {
+    /* Overlay thoda zyada dark kiya takki text zyada saaf dikhe */
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6); /* Thoda dark kiya (0.5 se 0.6) */
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+    /* Text ko busy background par saaf dikhane ke liye shadow */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content h1 {
-    font-size: 5.5rem;
-    margin-bottom: 0.5rem;
+    /* Guru Kripa Printers ko bada aur bold kiya */
+    font-size: 72px; /* Bada Size */
+    font-weight: 800; /* Extra Bold */
+    margin-bottom: 10px;
     color: #fff;
+    line-height: 1.1;
 }
 
 .tagline {
-    font-size: 1.25rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
+    /* Subheading ko thoda bada kiya */
+    font-size: 26px; /* Abhi ke 1.25rem se zyada */
+    font-weight: 400; /* Light weight rakha */
+    margin-bottom: 50px; /* Buttons se zyada space */
 }
 
+/* Button Container ko ab hum custom classes se control karenge */
+.btn-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Base button styles (Aapke existing styles ka use kiya gaya hai) */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 14px 30px; /* Buttons ko bada kiya */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Thoda gol corner */
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.3s ease;
     border: none;
     cursor: pointer;
+    margin: 0 12px; /* Buttons ke beech space diya */
 }
 
-.btn-primary {
-    background-color: var(--primary-color);
+/* WhatsApp Button (Custom Green Style) */
+.btn-whatsapp {
+    background-color: #25D366; /* WhatsApp Green */
     color: #fff;
+    border: 2px solid #25D366;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+.btn-whatsapp:hover {
+    background-color: #1DA851;
     transform: translateY(-2px);
+    border-color: #1DA851;
 }
 
-.btn-secondary {
+/* Contact Us Button (Ghost Style) */
+.btn-contact {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff; /* White border */
+    margin-left: 0; /* margin-left override kiya */
+}
+
+.btn-contact:hover {
     background-color: #fff;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    margin-left: 1rem;
-}
-
-.btn-secondary:hover {
-    background-color: var(--light-gray);
+    color: #212529; /* Text dark ho jayega */
     transform: translateY(-2px);
 }
-
-.btn-container {
-    text-align: center;
-    margin-top: 2rem;
+/* Icon spacing (agar aap font awesome use kar rahe hain) */
+.btn-whatsapp i {
+    margin-right: 8px;
 }
 
 /* Services Overview on Homepage */
@@ -561,28 +582,53 @@ p {
 /* * MOBILE RESPONSIVENESS FIX (Phones aur Tablets ke liye) */
 @media (max-width: 768px) {
     
-    /* Hero Section: Padding aur Font Size kam karna */
+    /* Hero Section: Padding aur Font Size kam karna (UPDATED) */
     .hero-section {
-        padding: 80px 10px; /* Upar/neeche aur side ka space kam kiya */
+        padding: 100px 15px; /* Mobile par padding thoda zyada rakha */
     }
     
     .hero-content h1 {
-        font-size: 2.5rem; /* Badi heading ko chhota karna */
+        font-size: 44px; /* Heading size mobile ke liye bada kiya (2.5rem se zyada) */
+        margin-bottom: 5px;
     }
+
+    .tagline {
+        font-size: 18px; /* Subheading size theek kiya */
+        margin-bottom: 30px; /* Buttons se space diya */
+    }
+
+    /* 👇 Naye Styles: Buttons ko mobile par theek karne ke liye 👇 */
+    .btn-container {
+        display: flex;
+        flex-direction: column; /* Buttons ek ke neeche ek aayenge */
+        align-items: center; /* Buttons center mein rahenge */
+    }
+
+    .btn {
+        width: 80%; /* Button ki chaurai badhai */
+        max-width: 300px;
+        margin: 10px 0; /* Upar aur neeche space diya, side space hataya */
+        padding: 12px 25px;
+    }
+    
+    .btn-contact {
+        margin: 10px 0; /* Contact button ka margin theek kiya */
+    }
+    /* 👆 Naye Styles Yahan Tak 👆 */
+    
     
     /* GALLERY SECTION: Grid aur Padding ko theek karna */
     .gallery-section {
-        padding: 2rem 0.5rem; /* Side ka padding aur kam kiya */
+        padding: 2rem 0.5rem; 
     }
 
     .gallery-grid {
-        /* Chhote phones ke liye min width ko 280px kiya */
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1rem; /* Items ke beech ka gap kam kiya */
+        gap: 1rem; 
     }
 
     .gallery-item {
-        height: 200px; /* Gallery box ki height thodi kam ki */
+        height: 200px;
     }
 }
 
