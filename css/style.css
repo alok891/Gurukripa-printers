@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family:'fantasy';
+    font-family:'fantasy'; /* Recommendation: Consider switching to 'Poppins', sans-serif for modern, readable body text. */
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -40,7 +40,8 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    text-align: center;
+    /* GLOBAL H2: Kept centered for page titles/sections */
+    text-align: center; 
     margin-bottom: 2rem;
 }
 
@@ -72,7 +73,7 @@ p {
 
 /* ✅ Added: for logo image */
 .logo img {
-    height: 60px;       /* adjust logo size here */
+    height: 60px;        /* adjust logo size here */
     width: auto;
     vertical-align: middle;
 }
@@ -83,16 +84,6 @@ p {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
-}
-
-}
-
-.navbar a {
-    color: var(--heading-color);
-    text-decoration: none;
-    margin-left: 2rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 .navbar a {
@@ -112,7 +103,7 @@ p {
 
 
 .menu-toggle {
-    display: block; /* already mobile me visible */
+    display: block; 
     font-size: 1.5rem;
     cursor: pointer;
     position: relative;
@@ -125,7 +116,6 @@ p {
     background: url('../images/hero-banner1.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    font:imapact;
     padding: 100px 20px;
     position: relative;
 }
@@ -351,13 +341,27 @@ p {
 }
 
 .service-card img {
-    width: 100px;
-    height: 100px;
+    /* Using max-width/height here to ensure better compatibility with lazy loading */
+    max-width: 150px; 
+    height: auto;
     margin-right: 2rem;
     flex-shrink: 0;
+    border-radius: 8px; /* Added rounded corners to images for better look */
 }
 
-.service-card-content h3 {
+/* Fix 1: Ensures the content area takes up the remaining space and stacks elements vertically (for CTA) */
+.service-card-content {
+    flex-grow: 1; /* Allows content to take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    height: 100%;
+}
+
+/* Fix 2: Layout Fix - Overrides global H2 center alignment to LEFT align the service title */
+.service-card-content h2 {
+    text-align: left; /* THIS IS THE KEY FIX for the layout issue */
+    margin-top: 0;
     margin-bottom: 0.5rem;
     color: var(--primary-color);
 }
@@ -369,6 +373,38 @@ p {
 .service-card.reverse img {
     margin-left: 2rem;
     margin-right: 0;
+}
+
+/* ---------------------------------------------
+NEW: CTA Button Styles (Point 4 Addition)
+--------------------------------------------- */
+
+/* 3. Styling the Call-to-Action Button */
+.cta-button {
+    /* Basic Appearance */
+    display: inline-block;
+    align-self: flex-start; /* Aligns button to the left */
+    margin-top: 15px; /* Adds space above the button */
+    padding: 10px 20px;
+    
+    /* Aesthetics */
+    background-color: #3f51b5; /* Primary brand color (use your theme color) */
+    color: #ffffff; 
+    text-align: center;
+    text-decoration: none; /* Removes underline from the link */
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    /* Ensure it doesn't stretch too wide on desktop */
+    max-width: 250px; 
+}
+
+/* 4. Hover and Active Effects (Crucial for good UX) */
+.cta-button:hover {
+    background-color: #303f9f; /* Slightly darker shade on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Gallery Page Specific - FINAL CODE */
@@ -488,13 +524,13 @@ p {
 /* Responsive Design - Desktop Navigation Fix */
 @media (min-width: 769px) {
     .menu-toggle {
-        display: none; 
+        display: none;    
     }
     .navbar {
         display: flex !important;
-        justify-content: flex-end; 
+        justify-content: flex-end;    
         flex-direction: row;
-        position: static; 
+        position: static;    
         background: transparent;
         box-shadow: none;
         padding: 0;
@@ -509,7 +545,7 @@ p {
 @media (max-width: 768px) {
     /* Menu ko default roop se chhipa dein */
     .navbar {
-        display: none; 
+        display: none;    
         flex-direction: column;
         width: 100%;
         position: absolute;
@@ -518,12 +554,12 @@ p {
         background-color: #fff;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         padding: 1rem 0;
-        z-index: 999; /* Z-index wapas de diya */
+        z-index: 999; 
     }
 
     /* JavaScript se toggle hone par menu dikhega */
     .navbar.active {
-        display: flex; 
+        display: flex;    
     }
 
     /* Hamburger Icon ko mobile par dikha dein */
@@ -533,37 +569,45 @@ p {
     
     /* Hero Section: Padding aur Font Size kam karna */
     .hero-section {
-        padding: 80px 10px; 
+        padding: 80px 10px;    
     }
     
     .hero-content h1 {
-        font-size: 2.5rem; 
+        font-size: 2.5rem;    
     }
     
     /* GALLERY SECTION: Grid aur Padding ko theek karna */
     .gallery-section {
-        padding: 2rem 0.5rem; 
+        padding: 2rem 0.5rem;    
     }
 
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1rem; 
+        gap: 1rem;    
     }
 
     .gallery-item {
-        height: 200px; 
+        height: 200px;    
+    }
+
+    /* 5. Mobile Responsiveness for CTA */
+    .cta-button {
+        /* Makes the button full width on small screens for easy tapping */
+        max-width: 100%; 
+        width: 100%;
+    }
+
+    /* 6. Service Card responsive layout fix */
+    .service-card, .service-card.reverse {
+        flex-direction: column; /* Force vertical stacking on mobile */
+        text-align: center;
+    }
+
+    .service-card img, .service-card.reverse img {
+        margin: 1rem auto; /* Center the image on mobile */
+    }
+
+    .service-card-content h2 {
+        text-align: center; /* Center the title on mobile */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
