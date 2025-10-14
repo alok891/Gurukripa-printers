@@ -7,6 +7,9 @@
     --text-color: #333;
     --heading-color: #212529;
     --light-gray: #e9ecef;
+    /* Added for clickable contact links */
+    --contact-link-color: var(--primary-color);
+    --contact-link-hover: #0056b3; 
 }
 
 * {
@@ -16,7 +19,8 @@
 }
 
 body {
-    font-family:'fantasy'; /* Recommendation: Consider switching to 'Poppins', sans-serif for modern, readable body text. */
+    /* FINAL FONT CHANGE for professional look and mobile readability */
+    font-family: 'Poppins', sans-serif; 
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -71,14 +75,14 @@ p {
     color: var(--primary-color);
 }
 
-/* ✅ Added: for logo image */
+/* Logo Image Styling */
 .logo img {
-    height: 60px;        /* adjust logo size here */
+    height: 60px;
     width: auto;
     vertical-align: middle;
 }
 
-/* ✅ Added: for optional text next to image */
+/* Logo Text Styling */
 .logo-text {
     margin-left: 10px;
     font-size: 1.5rem;
@@ -316,7 +320,7 @@ p {
     margin: 0 auto;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,4,8,0.1);
     margin-top: 2rem;
 }
 
@@ -376,10 +380,8 @@ p {
 }
 
 /* ---------------------------------------------
-NEW: CTA Button Styles (Point 4 Addition)
+NEW: CTA Button Styles 
 --------------------------------------------- */
-
-/* 3. Styling the Call-to-Action Button */
 .cta-button {
     /* Basic Appearance */
     display: inline-block;
@@ -400,7 +402,7 @@ NEW: CTA Button Styles (Point 4 Addition)
     max-width: 250px; 
 }
 
-/* 4. Hover and Active Effects (Crucial for good UX) */
+/* Hover and Active Effects (Crucial for good UX) */
 .cta-button:hover {
     background-color: #303f9f; /* Slightly darker shade on hover */
     transform: translateY(-2px); /* Subtle lift effect */
@@ -408,33 +410,29 @@ NEW: CTA Button Styles (Point 4 Addition)
 }
 
 /* Gallery Page Specific - FINAL CODE */
-
 .gallery-section {
-    /* Side ka space kam kiya gaya hai */
     padding: 3rem 1rem; 
     background-color: #f9f9f9; 
 }
 
 .gallery-grid {
     display: grid;
-    /* Images teen-teen ke set mein aayengi (320px minimum size) */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-    gap: 1.5rem; /* Boxes ke beech ka space */
+    gap: 1.5rem; 
     justify-items: center; 
     align-items: center; 
 }
 
 .gallery-item {
-    /* Height fix ki gayi aur image ko center mein laane ki setting */
     position: relative; 
-    height: 250px; /* 👈 Har box ki uniform height */
+    height: 250px; 
     width: 100%; 
     overflow: hidden; 
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #ffffff; /* Image ke aas-paas white background */
-    display: flex; /* Image ko center mein karne ke liye */
+    background-color: #ffffff; 
+    display: flex; 
     justify-content: center; 
     align-items: center; 
 }
@@ -445,12 +443,11 @@ NEW: CTA Button Styles (Point 4 Addition)
 }
 
 .gallery-item img {
-    /* Images ko bina kate box mein fit kiya jaayega */
-    max-width: 100%; /* 👉 Image ki maximum width box ke barabar */
-    max-height: 100%; /* 👉 Image ki maximum height box ke barabar */
+    max-width: 100%; 
+    max-height: 100%; 
     width: auto; 
     height: auto; 
-    object-fit: contain; /* 👈 Yeh ensure karega ki image cut na ho */
+    object-fit: contain; 
     display: block;
 }
 /* Contact Page Specific */
@@ -507,6 +504,19 @@ NEW: CTA Button Styles (Point 4 Addition)
     margin-right: 10px;
     font-size: 1.2rem;
 }
+/* NEW: Styles for Clickable Phone/Email links */
+.contact-info .contact-link {
+    text-decoration: none; /* Remove default underline */
+    color: var(--contact-link-color); /* Use the primary color */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-info .contact-link:hover {
+    color: var(--contact-link-hover); /* Slightly darker color on hover */
+    text-decoration: underline; /* Add underline on hover for clarity */
+}
+/* END NEW STYLES */
 
 .contact-map {
     height: 400px;
@@ -582,7 +592,7 @@ NEW: CTA Button Styles (Point 4 Addition)
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmin(280px, 1fr));
         gap: 1rem;    
     }
 
@@ -590,14 +600,14 @@ NEW: CTA Button Styles (Point 4 Addition)
         height: 200px;    
     }
 
-    /* 5. Mobile Responsiveness for CTA */
+    /* Mobile Responsiveness for CTA */
     .cta-button {
         /* Makes the button full width on small screens for easy tapping */
         max-width: 100%; 
         width: 100%;
     }
 
-    /* 6. Service Card responsive layout fix */
+    /* Service Card responsive layout fix */
     .service-card, .service-card.reverse {
         flex-direction: column; /* Force vertical stacking on mobile */
         text-align: center;
