@@ -25,9 +25,27 @@
 </script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+    <link rel="canonical" href="https://alok891.github.io/Gurukripa-printers/services.html" />
 </head>
 <body>
-    <header class="header">...</header>
+    <!-- Consistent HEADER added here -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="Guru Kripa Printers">
+            <span class="logo-text"></span> 
+        </a>
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
 
     <main>
         <section class="services-page-container">
@@ -37,7 +55,7 @@
                 <div class="service-card-content">
                     <h2>Banner Design & Printing</h2>
                     <p>Make a big impact with our custom-designed banners. We offer a variety of sizes and materials to suit your advertising and event needs, from vibrant vinyl banners to professional roll-ups. Our designs are crafted to catch the eye and effectively communicate your message.</p>
-                  <a href="contact.html#quote-form" class="cta-button">Contact Us Now</a>
+                    <a href="contact.html#quote-form" class="cta-button">Contact Us Now</a>
                 </div>
             </div>
 
@@ -46,7 +64,7 @@
                 <div class="service-card-content">
                     <h2>Graphic Designing Works</h2>
                     <p>Our expert graphic designers turn ideas into stunning visuals. We provide a full suite of services, including logo creation, brand identity, social media graphics, and print collateral design. We work with you to ensure your brand's look is cohesive and professional.</p>
-                   <a href="contact.html#quote-form" class="cta-button">Contact Us Now</a>
+                    <a href="contact.html#quote-form" class="cta-button">Contact Us Now</a>
                 </div>
             </div>
 
@@ -55,7 +73,7 @@
                 <div class="service-card-content">
                     <h2>Visiting Cards</h2>
                     <p>Your visiting card is your first impression. We offer a range of premium papers, finishes, and designs to create a card that truly represents you and your brand. Choose from glossy, matte, or special textures to stand out from the crowd.</p>
-                  <a href="contact.html#quote-form" class="cta-button">Contact Us Now</a>
+                    <a href="contact.html#quote-form" class="cta-button">Contact Us Now</a>
                 </div>
             </div>
 
@@ -68,7 +86,7 @@
                 </div>
             </div>
 
-             <div class="service-card ">
+            <div class="service-card ">
                 <img src="images/billboards.jpg" alt="Large Outdoor Billboard and Hoarding Printing in Bhopal" loading="lazy">
                 <div class="service-card-content">
                     <h2>Billboards</h2>
@@ -86,7 +104,7 @@
                 </div>
             </div>
 
-             <div class="service-card ">
+            <div class="service-card ">
                <img src="images/letter.jpg" alt="Customized Business Letterhead Printing" loading="lazy">
                 <div class="service-card-content">
                     <h2>Letterhead</h2>
@@ -95,7 +113,7 @@
                 </div>
             </div>
 
-             <div class="service-card reverse">
+            <div class="service-card reverse">
                <img src="images/flyer.jpg" alt="High-Quality Flyer and Brochure Printing" loading="lazy">
                 <div class="service-card-content">
                     <h2>Flyer-Brochure</h2>
@@ -104,26 +122,53 @@
                 </div>
             </div>
 
-          
-           </section>
+            </section>
     </main>
 
-    <footer class="footer">...</footer>
-    <script src="js/script.js"></script>
+    <!-- Consistent FOOTER and its corresponding JS added here -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Guru Kripa Printers</h4>
+                <p>Your trusted partner for all printing and design solutions in Bhopal.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Bhopal, MP, India</p>
+                <p>Phone: +91 9827268725</p>
+                <p>Email: rakeshyagyik77@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; <span id="year">2024</span> Guru Kripa Printers. All rights reserved.
+        </div>
+    </footer>
+    
+    <script>
+        // Set the current year for the footer copyright
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle logic
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('navbar').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
