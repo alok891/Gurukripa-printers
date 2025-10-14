@@ -10,9 +10,28 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Added for consistency and SEO -->
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+    <link rel="canonical" href="https://alok891.github.io/Gurukripa-printers/contact.html" />
 </head>
 <body>
-    <header class="header">...</header>
+    <!-- Consistent HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="Guru Kripa Printers">
+            <span class="logo-text"></span> 
+        </a>
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
 
     <main>
         <div class="contact-container">
@@ -67,10 +86,45 @@
         </section>
     </main>
 
-    <footer class="footer">...</footer>
+    <!-- Consistent FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Guru Kripa Printers</h4>
+                <p>Your trusted partner for all printing and design solutions in Bhopal.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Bhopal, MP, India</p>
+                <p>Phone: +91 9827268725</p>
+                <p>Email: rakeshyagyik77@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; <span id="year">2024</span> Guru Kripa Printers. All rights reserved.
+        </div>
+    </footer>
     
-    <!-- JavaScript for mailto: functionality remains here -->
+    <!-- JavaScript for mailto: functionality and mobile menu/year -->
     <script>
+    // Mailto form submission logic
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault(); 
         const name = document.getElementById('name').value;
@@ -82,8 +136,14 @@
             `mailto:rakeshyagyik77@gmail.com?subject=New Quote Request from Website (${name})&body=${body}`;
         document.getElementById('contactForm').reset();
     });
+
+    // Set the current year for the footer copyright
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle logic
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('navbar').classList.toggle('active');
+    });
     </script>
 </body>
-
 </html>
-
