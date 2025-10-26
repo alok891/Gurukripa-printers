@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us for Printing Quotes in Bhopal | Guru Kripa Printers</title>
-    <meta name="description" content="Get fast quotes and professional advice from Guru Kripa Printers in Bhopal. Contact us via phone, email, or visit our printing press at Barkhedi for all your printing needs.">
+    <title>Contact Us for Printing & Design Quotes in Bhopal | Guru Kripa Printers</title>
+    <meta name="description" content="Get fast quotes and professional advice from Guru Kripa Printers in Bhopal. Contact us via phone, email, or visit our printing press at Barkhedi for all your design and printing needs.">
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -45,7 +45,7 @@
             </div>
             
             <div class="contact-form" id="quote-form">
-                <h3>Request a Custom Quote & Design Brief</h3>
+                <h3>Request a Custom Quote</h3>
                 <form id="contactForm">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -58,35 +58,42 @@
 
                     <hr style="margin-top: 15px; margin-bottom: 15px;">
                     
-                    <label for="product">1. Product Type Needed</label>
+                    <label for="product">1. What service/product are you interested in?</label>
                     <select id="product" name="product" required>
-                        <option value="">-- Select Product --</option>
-                        <option value="Business Cards">Business Cards</option>
-                        <option value="Flyers/Brochures">Flyers / Brochures</option>
-                        <option value="Banners/Flex">Banners / Flex / Signage</option>
-                        <option value="Stationery (Letterhead, Envelope)">Stationery (Letterhead, Envelope)</option>
-                        <option value="Marriage/Invitation Cards">Marriage / Invitation Cards</option>
-                        <option value="Other">Other / Custom Print Job</option>
+                        <option value="">-- Select Service / Product --</option>
+                        <optgroup label="Design Services">
+                            <option value="Logo Design">Logo Design</option>
+                            <option value="Poster Design">Poster Design</option>
+                            <option value="Flyer Design">Flyer Design</option>
+                            <option value="Business Card Design">Business Card Design</option>
+                            <option value="Letterhead Design">Letterhead Design</option>
+                            <option value="Newspaper Ad Design">Newspaper Ad Design</option>
+                            <option value="Social Media Post Design">Social Media Post Design</option>
+                            <option value="Website Design">Website Design</option>
+                            <option value="Facebook Ads Design">Facebook Ads Design</option>
+                            <option value="Instagram Grid Design">Instagram Grid Design</option>
+                            <option value="Restaurant Menu Design">Restaurant Menu Design</option>
+                            <option value="Packaging Design">Packaging Design</option>
+                            <option value="Sticker Design">Sticker Design</option>
+                            <option value="Stories/Status Design">Stories/Status Design</option>
+                        </optgroup>
+                        <optgroup label="Printing Services">
+                            <option value="Banner Printing">Banner Printing</option>
+                            <option value="Billboard Printing">Billboard Printing</option>
+                            <option value="Other Printing (Please specify in details)">Other Printing (Please specify in details)</option>
+                        </optgroup>
+                        <option value="Other Design Service (Please specify in details)">Other Design Service (Please specify in details)</option>
+                        <option value="General Inquiry">General Inquiry</option>
                     </select>
                     
-                    <label for="quantity">2. Quantity</label>
-                    <input type="number" id="quantity" name="quantity" required min="100" placeholder="e.g., 500 or 1000">
+                    <label for="quantity">2. Quantity (if applicable)</label>
+                    <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 500, 1000, or 1 (for design-only)">
 
-                    <label for="size">3. Size / Dimensions</label>
-                    <input type="text" id="size" name="size" required placeholder="e.g., 3.5 x 2 inches, A4, 10x4 feet">
+                    <label for="size">3. Size / Dimensions (if applicable)</label>
+                    <input type="text" id="size" name="size" placeholder="e.g.inches, feet">
 
-                    <label for="design_status">4. Do You Need Design Services?</label>
-                    <select id="design_status" name="design_status" required>
-                        <option value="Yes_Need_Design">Yes, I need design from Guru Kripa Printers</option>
-                        <option value="No_Have_File">No, I have a print-ready file</option>
-                    </select>
-
-                    <label for="specs">5. Paper/Material Type & Special Instructions (Optional)</label>
-                    <textarea id="specs" name="specs" rows="3" placeholder="e.g., 300 GSM Matte Paper, Lamination required, Single-sided printing, etc."></textarea>
-                    
-                    <p style="font-size: 0.9em; color: #555;">
-                        *If you have a file to share, please reply to our quote email with your design file attached or a link (Google Drive/Dropbox).
-                    </p>
+                    <label for="details">4. Any additional details or requirements?</label>
+                    <textarea id="details" name="details" rows="4" placeholder="e.g., 'Need logo design with 3 concepts', 'Printing 500 flyers, glossy finish', 'Need a social media campaign for 1 week'"></textarea>
 
                     <button type="submit" class="btn btn-primary">Get My Quote</button>
                 </form>
@@ -153,12 +160,11 @@
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
         
-        // NEW PROJECT DETAILS FIELDS
+        // PROJECT DETAILS FIELDS
         const product = document.getElementById('product').value;
         const quantity = document.getElementById('quantity').value;
         const size = document.getElementById('size').value;
-        const design_status = document.getElementById('design_status').value;
-        const specs = document.getElementById('specs').value;
+        const details = document.getElementById('details').value; // New details field
         
         // Construct the email body with all details
         const body = `
@@ -166,18 +172,17 @@ Name: ${name}%0A
 Email: ${email}%0A
 Phone: ${phone}%0A
 %0A
---- PROJECT DETAILS ---%0A
-1. Product Type: ${product}%0A
-2. Quantity: ${quantity}%0A
-3. Size/Dimensions: ${size}%0A
-4. Design Status: ${design_status}%0A
-5. Material/Specs: ${specs}%0A
+--- INQUIRY DETAILS ---%0A
+1. Service/Product: ${product}%0A
+2. Quantity: ${quantity || 'N/A'}%0A
+3. Size/Dimensions: ${size || 'N/A'}%0A
+4. Additional Details: ${details || 'None provided'}%0A
 %0A
 `;
         
         // Open the user's email client
         window.location.href = 
-            `mailto:rakeshyagyik77@gmail.com?subject=NEW PRINT QUOTE REQUIRED: ${product} (${name})&body=${body}`;
+            `mailto:rakeshyagyik77@gmail.com?subject=NEW INQUIRY: ${product} (${name})&body=${body}`;
         
         // Reset the form after attempting to open mailto
         document.getElementById('contactForm').reset();
