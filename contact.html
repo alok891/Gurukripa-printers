@@ -71,23 +71,20 @@
                             <option value="Sticker / Label Printing">Sticker / Label Printing</option>
                         </optgroup>
                         
-                        <optgroup label="Other Printing & Large Format">
+                        <optgroup label="Large Format & Others">
                             <option value="Billboard Printing">Billboard Printing</option>
                             <option value="Packaging Printing">Packaging Printing</option>
-                            <option value="Other Printing (Please specify in details)">Other Printing (Please specify in details)</option>
+                            <option value="Letterhead Printing">Letterhead Printing</option>
+                            <option value="Restaurant Menu Printing">Restaurant Menu Printing</option>
+                            <option value="Other Printing (Specify below)">Other Printing (Specify below)</option>
                         </optgroup>
                         
-                        <optgroup label="Design Services">
-                            <option value="Logo Design">Logo Design</option>
-                            <option value="Letterhead Design">Letterhead Design</option>
-                            <option value="Restaurant Menu Design">Restaurant Menu Design</option>
-                            <option value="Social Media Post Design">Social Media Post Design</option>
-                            <option value="Website Design">Website Design</option>
-                            <option value="Facebook Ads Design">Facebook Ads Design</option>
-                            <option value="Instagram Grid Design">Instagram Grid Design</option>
-                            <option value="Newspaper Ad Design">Newspaper Ad Design</option>
-                            <option value="Stories/Status Design">Stories/Status Design</option>
-                            <option value="Other Design Service (Please specify in details)">Other Design Service (Please specify in details)</option>
+                        <optgroup label="Design-Only Services">
+                            <option value="Logo / Visual Identity Design">Logo / Visual Identity Design</option>
+                            <option value="Website / Social Media Design">Website / Social Media Design (Graphics, Posts, Ads)</option>
+                            <option value="Packaging / Menu Design">Packaging / Menu Design</option>
+                            <option value="General Print Design (Flyer, Poster, etc.)">General Print Design (Flyer, Poster, etc.)</option>
+                            <option value="Other Design Service (Specify below)">Other Design Service (Specify below)</option>
                         </optgroup>
 
                         <option value="General Inquiry">General Inquiry</option>
@@ -97,7 +94,7 @@
                     <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 500, 1000, or 1 (for design-only)">
 
                     <label for="size">3. Size / Dimensions (if applicable)</label>
-                    <input type="text" id="size" name="size" placeholder="e.g., A4, 3.5 x 2 inches, 10x4 feet">
+                    <input type="text" id="size" name="size" placeholder="e.g. inches,feet">
 
                     <label for="details">4. Any additional details or requirements?</label>
                     <textarea id="details" name="details" rows="4" placeholder="e.g., 'Need logo design with 3 concepts', 'Printing 500 flyers, glossy finish', 'Need a social media campaign for 1 week'"></textarea>
@@ -171,7 +168,7 @@
         const product = document.getElementById('product').value;
         const quantity = document.getElementById('quantity').value;
         const size = document.getElementById('size').value;
-        const details = document.getElementById('details').value; // New details field
+        const details = document.getElementById('details').value; 
         
         // Construct the email body with all details
         const body = `
