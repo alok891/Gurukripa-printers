@@ -10,29 +10,123 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/jpg" href="images/logo.jpg">
     <link rel="canonical" href="https://alok891.github.io/Gurukripa-printers/contact.html" />
+    
     <style>
+        /* Modern Container Layout */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows sections to stack on smaller screens */
+            gap: 40px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Styling the Information Block */
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background-color: #f7f7f7; /* Light background for contrast */
+            border-radius: 8px;
+            align-self: stretch; /* Ensures height matches form */
+        }
+        .contact-info h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .contact-info h3 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .contact-info i {
+            color: #007bff; /* Accent color for icons */
+            margin-right: 10px;
+        }
+
+        /* Styling the Quote Form Block (Modern Look) */
+        .contact-form {
+            flex: 2; /* Gives more space to the form */
+            min-width: 400px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft, modern shadow */
+        }
+        .contact-form h3 {
+            color: #007bff;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        .contact-form label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+        .contact-form .btn-primary {
+            margin-top: 25px;
+            padding: 12px 20px;
+            font-size: 1.1em;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .contact-form .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Radio Button Group Styling (Grid/Modern) */
         .service-options {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 10px;
             margin-bottom: 20px;
+            margin-top: 10px;
         }
         .service-options div {
             padding: 10px 15px;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             border-radius: 5px;
             cursor: pointer;
             transition: all 0.2s;
+            background-color: #fafafa;
         }
         .service-options div:hover {
-            border-color: #007bff; /* Highlight color on hover */
-            background-color: #f8f9fa;
+            border-color: #007bff; 
+            background-color: #e9f5ff; /* Light blue hover background */
         }
         .service-options input[type="radio"]:checked + label {
-            font-weight: bold;
-            color: #007bff; /* Color for checked state */
+            font-weight: 600;
+            color: #007bff; 
         }
-        /* Hide default radio buttons but keep them functional */
         .service-options input[type="radio"] {
             position: absolute;
             opacity: 0;
@@ -42,6 +136,17 @@
             margin-bottom: 10px;
             border-bottom: 1px solid #eee;
             padding-bottom: 5px;
+            color: #333;
+            font-size: 1.1em;
+        }
+        /* Black circle symbol */
+        .form-label-symbol::before {
+            content: "•"; 
+            color: #000;
+            margin-right: 5px;
+            font-size: 1.2em;
+            line-height: 1;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -93,7 +198,7 @@
                     <hr style="margin-top: 15px; margin-bottom: 15px;">
                     
                     <div class="service-group">
-                        <label>1. What service/product are you interested in?</label>
+                        <label class="form-label-symbol">What service/product are you interested in?</label>
                         
                         <h4>Core Printing Products</h4>
                         <div class="service-options">
@@ -163,14 +268,14 @@
                             </div>
                         </div>
                     </div>
-                    <label for="quantity">2. Quantity (if applicable)</label>
+                    <label for="quantity" class="form-label-symbol">Quantity (if applicable)</label>
                     <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 500, 1000, or 1 (for design-only)">
 
-                    <label for="size">3. Size / Dimensions (if applicable)</label>
-                    <input type="text" id="size" name="size" placeholder="e.g. inches,feet">
+                    <label for="size" class="form-label-symbol">Size / Dimensions (if applicable)</label>
+                    <input type="text" id="size" name="size" placeholder="e.g.10X5 inches, 10x4 feet">
 
-                    <label for="details">4. Any additional details or requirements?</label>
-                    <textarea id="details" name="details" rows="4" placeholder="e.g., 'Need logo design with 3 concepts', 'Printing 500 flyers, glossy finish', 'Need a social media campaign for 1 week'"></textarea>
+                    <label for="details" class="form-label-symbol">Any additional details or requirements?</label>
+                    <textarea id="details" name="details" rows="4" placeholder="brief, direct, and covers all essential print requirements."></textarea>
 
                     <button type="submit" class="btn btn-primary">Get My Quote</button>
                 </form>
@@ -223,7 +328,7 @@
             </div>
         </div>
         <div class="copyright">
-            © <span id="year">2024</span> Guru Kripa Printers. All rights reserved.
+            © <span id="year">2025</span> Guru Kripa Printers. All rights reserved.
         </div>
     </footer>
     
@@ -252,10 +357,10 @@ Email: ${email}%0A
 Phone: ${phone}%0A
 %0A
 --- INQUIRY DETAILS ---%0A
-1. Service/Product: ${product}%0A
-2. Quantity: ${quantity || 'N/A'}%0A
-3. Size/Dimensions: ${size || 'N/A'}%0A
-4. Additional Details: ${details || 'None provided'}%0A
+Service/Product: ${product}%0A
+Quantity: ${quantity || 'N/A'}%0A
+Size/Dimensions: ${size || 'N/A'}%0A
+Additional Details: ${details || 'None provided'}%0A
 %0A
 `;
         
