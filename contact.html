@@ -10,6 +10,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/jpg" href="images/logo.jpg">
     <link rel="canonical" href="https://alok891.github.io/Gurukripa-printers/contact.html" />
+    <style>
+        .service-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .service-options div {
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .service-options div:hover {
+            border-color: #007bff; /* Highlight color on hover */
+            background-color: #f8f9fa;
+        }
+        .service-options input[type="radio"]:checked + label {
+            font-weight: bold;
+            color: #007bff; /* Color for checked state */
+        }
+        /* Hide default radio buttons but keep them functional */
+        .service-options input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+        .service-group h4 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -58,38 +92,77 @@
 
                     <hr style="margin-top: 15px; margin-bottom: 15px;">
                     
-                    <label for="product">1. What service/product are you interested in?</label>
-                    <select id="product" name="product" required>
-                        <option value="">-- Select Service / Product --</option>
+                    <div class="service-group">
+                        <label>1. What service/product are you interested in?</label>
                         
-                        <optgroup label="Core Printing Products">
-                            <option value="Banner / Flex Printing">Banner / Flex Printing</option>
-                            <option value="Visiting Card / Business Card Printing">Visiting Card / Business Card Printing</option>
-                            <option value="Flyer / Pamphlet Printing">Flyer / Pamphlet Printing</option>
-                            <option value="Brochure Printing">Brochure Printing</option>
-                            <option value="Poster Printing">Poster Printing</option>
-                            <option value="Sticker / Label Printing">Sticker / Label Printing</option>
-                        </optgroup>
-                        
-                        <optgroup label="Large Format & Others">
-                            <option value="Billboard Printing">Billboard Printing</option>
-                            <option value="Packaging Printing">Packaging Printing</option>
-                            <option value="Letterhead Printing">Letterhead Printing</option>
-                            <option value="Restaurant Menu Printing">Restaurant Menu Printing</option>
-                            <option value="Other Printing (Specify below)">Other Printing (Specify below)</option>
-                        </optgroup>
-                        
-                        <optgroup label="Design-Only Services">
-                            <option value="Logo / Visual Identity Design">Logo / Visual Identity Design</option>
-                            <option value="Website / Social Media Design">Website / Social Media Design (Graphics, Posts, Ads)</option>
-                            <option value="Packaging / Menu Design">Packaging / Menu Design</option>
-                            <option value="General Print Design (Flyer, Poster, etc.)">General Print Design (Flyer, Poster, etc.)</option>
-                            <option value="Other Design Service (Specify below)">Other Design Service (Specify below)</option>
-                        </optgroup>
+                        <h4>Core Printing Products</h4>
+                        <div class="service-options">
+                            <div>
+                                <input type="radio" id="print-banner" name="product" value="Banner / Flex Printing" required>
+                                <label for="print-banner">Banner / Flex</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="print-card" name="product" value="Visiting Card / Business Card Printing">
+                                <label for="print-card">Visiting Cards</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="print-flyer" name="product" value="Flyer / Pamphlet Printing">
+                                <label for="print-flyer">Flyers / Pamphlets</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="print-poster" name="product" value="Poster Printing">
+                                <label for="print-poster">Posters</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="print-brochure" name="product" value="Brochure Printing">
+                                <label for="print-brochure">Brochures</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="print-sticker" name="product" value="Sticker / Label Printing">
+                                <label for="print-sticker">Stickers / Labels</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="print-menu" name="product" value="Restaurant Menu Printing">
+                                <label for="print-menu">Restaurant Menus</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="print-letterhead" name="product" value="Letterhead Printing">
+                                <label for="print-letterhead">Letterheads</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="print-billboard" name="product" value="Billboard Printing">
+                                <label for="print-billboard">Billboard / Signage</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="print-other" name="product" value="Other Printing (Specify below)">
+                                <label for="print-other">Other Printing</label>
+                            </div>
+                        </div>
 
-                        <option value="General Inquiry">General Inquiry</option>
-                    </select>
-                    
+                        <h4>Design-Only Services</h4>
+                        <div class="service-options">
+                            <div>
+                                <input type="radio" id="design-logo" name="product" value="Logo / Visual Identity Design">
+                                <label for="design-logo">Logo Design</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="design-social" name="product" value="Website / Social Media Design">
+                                <label for="design-social">Social Media Graphics</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="design-print" name="product" value="General Print Design (Flyer, Poster, etc.)">
+                                <label for="design-print">General Print Design</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="design-other" name="product" value="Other Design Service (Specify below)">
+                                <label for="design-other">Other Design</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="general-inquiry" name="product" value="General Inquiry">
+                                <label for="general-inquiry">General Inquiry</label>
+                            </div>
+                        </div>
+                    </div>
                     <label for="quantity">2. Quantity (if applicable)</label>
                     <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 500, 1000, or 1 (for design-only)">
 
@@ -101,7 +174,7 @@
 
                     <button type="submit" class="btn btn-primary">Get My Quote</button>
                 </form>
-                </div>
+            </div>
         </div>
 
         <section class="contact-map">
@@ -164,8 +237,10 @@
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
         
-        // PROJECT DETAILS FIELDS
-        const product = document.getElementById('product').value;
+        // PROJECT DETAILS FIELDS: Get value from the checked radio button
+        const productElement = document.querySelector('input[name="product"]:checked');
+        const product = productElement ? productElement.value : 'Not Selected';
+
         const quantity = document.getElementById('quantity').value;
         const size = document.getElementById('size').value;
         const details = document.getElementById('details').value; 
