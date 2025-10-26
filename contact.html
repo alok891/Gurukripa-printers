@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 1. SEO: Updated Title with Keywords and Location -->
     <title>Contact Us for Printing Quotes in Bhopal | Guru Kripa Printers</title>
-    <!-- 2. SEO: Added Meta Description for Local SEO -->
     <meta name="description" content="Get fast quotes and professional advice from Guru Kripa Printers in Bhopal. Contact us via phone, email, or visit our printing press at Barkhedi for all your printing needs.">
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Added for consistency and SEO -->
     <link rel="icon" type="image/jpg" href="images/logo.jpg">
     <link rel="canonical" href="https://alok891.github.io/Gurukripa-printers/contact.html" />
 </head>
 <body>
-    <!-- Consistent HEADER -->
     <header class="header">
         <a href="index.html" class="logo">
             <img src="images/logo.jpg" alt="Guru Kripa Printers">
@@ -39,36 +35,62 @@
                 <h1>Get in Touch with Guru Kripa Printers</h1>
                 
                 <h3>Contact Details</h3>
-                <!-- Address: Important for Local SEO -->
                 <p><i class="fas fa-map-marker-alt"></i> Address: Barkhedi, Near Jhangirabad Bhopal (M.P)</p>
                 
-                <!-- 📞 NEW: Clickable Phone Number -->
                 <p><i class="fas fa-phone-alt"></i> Call Us: <a href="tel:+919827268725" class="contact-link">+91 9827268725</a></p>
                 
-                <!-- 📧 NEW: Clickable Email Address -->
                 <p><i class="fas fa-envelope"></i> Email: <a href="mailto:rakeshyagyik77@gmail.com" class="contact-link">rakeshyagyik77@gmail.com</a></p>
                 
                 <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/9827268725" target="_blank">Chat with us on WhatsApp</a></p>
             </div>
             
             <div class="contact-form" id="quote-form">
-                <h3>Request a Quick Quote</h3>
-                <form id="contactForm"> 
+                <h3>Request a Custom Quote & Design Brief</h3>
+                <form id="contactForm">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
 
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
 
-                    <label for="phone">Phone (Optional)</label>
+                    <label for="phone">Phone (Highly Recommended for Fast Quote)</label>
                     <input type="tel" id="phone" name="phone">
 
-                    <label for="message">Your Project Details / Question</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <hr style="margin-top: 15px; margin-bottom: 15px;">
+                    
+                    <label for="product">1. Product Type Needed</label>
+                    <select id="product" name="product" required>
+                        <option value="">-- Select Product --</option>
+                        <option value="Business Cards">Business Cards</option>
+                        <option value="Flyers/Brochures">Flyers / Brochures</option>
+                        <option value="Banners/Flex">Banners / Flex / Signage</option>
+                        <option value="Stationery (Letterhead, Envelope)">Stationery (Letterhead, Envelope)</option>
+                        <option value="Marriage/Invitation Cards">Marriage / Invitation Cards</option>
+                        <option value="Other">Other / Custom Print Job</option>
+                    </select>
+                    
+                    <label for="quantity">2. Quantity</label>
+                    <input type="number" id="quantity" name="quantity" required min="100" placeholder="e.g., 500 or 1000">
 
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <label for="size">3. Size / Dimensions</label>
+                    <input type="text" id="size" name="size" required placeholder="e.g., 3.5 x 2 inches, A4, 10x4 feet">
+
+                    <label for="design_status">4. Do You Need Design Services?</label>
+                    <select id="design_status" name="design_status" required>
+                        <option value="Yes_Need_Design">Yes, I need design from Guru Kripa Printers</option>
+                        <option value="No_Have_File">No, I have a print-ready file</option>
+                    </select>
+
+                    <label for="specs">5. Paper/Material Type & Special Instructions (Optional)</label>
+                    <textarea id="specs" name="specs" rows="3" placeholder="e.g., 300 GSM Matte Paper, Lamination required, Single-sided printing, etc."></textarea>
+                    
+                    <p style="font-size: 0.9em; color: #555;">
+                        *If you have a file to share, please reply to our quote email with your design file attached or a link (Google Drive/Dropbox).
+                    </p>
+
+                    <button type="submit" class="btn btn-primary">Get My Quote</button>
                 </form>
-            </div>
+                </div>
         </div>
 
         <section class="contact-map">
@@ -86,7 +108,6 @@
         </section>
     </main>
 
-    <!-- Consistent FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
@@ -118,22 +139,47 @@
             </div>
         </div>
         <div class="copyright">
-            &copy; <span id="year">2024</span> Guru Kripa Printers. All rights reserved.
+            © <span id="year">2024</span> Guru Kripa Printers. All rights reserved.
         </div>
     </footer>
     
-    <!-- JavaScript for mailto: functionality and mobile menu/year -->
     <script>
     // Mailto form submission logic
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
+        
+        // Get all form values
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
-        const message = document.getElementById('message').value;
-        const body = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0A%0AProject Details:%0A${message}`;
+        
+        // NEW PROJECT DETAILS FIELDS
+        const product = document.getElementById('product').value;
+        const quantity = document.getElementById('quantity').value;
+        const size = document.getElementById('size').value;
+        const design_status = document.getElementById('design_status').value;
+        const specs = document.getElementById('specs').value;
+        
+        // Construct the email body with all details
+        const body = `
+Name: ${name}%0A
+Email: ${email}%0A
+Phone: ${phone}%0A
+%0A
+--- PROJECT DETAILS ---%0A
+1. Product Type: ${product}%0A
+2. Quantity: ${quantity}%0A
+3. Size/Dimensions: ${size}%0A
+4. Design Status: ${design_status}%0A
+5. Material/Specs: ${specs}%0A
+%0A
+`;
+        
+        // Open the user's email client
         window.location.href = 
-            `mailto:rakeshyagyik77@gmail.com?subject=New Quote Request from Website (${name})&body=${body}`;
+            `mailto:rakeshyagyik77@gmail.com?subject=NEW PRINT QUOTE REQUIRED: ${product} (${name})&body=${body}`;
+        
+        // Reset the form after attempting to open mailto
         document.getElementById('contactForm').reset();
     });
 
