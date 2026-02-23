@@ -128,14 +128,16 @@
 
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-        createChat({
-            host: 'https://unfellable-unrebukable-lisbeth.ngrok-free.dev', 
-            webhookId: '4f2687a9-969d-4edf-8635-8f7aa23f3e68',
-            showWelcomeScreen: true,
-            title: 'GK Printers AI Assistant',
-            welcomeMessage: 'Namaste! GK Printers mein aapka swagat hai. Main aapki kya madad kar sakta hoon?',
-            backgroundColor: '#007bff',
-        });
+       createChat({
+    host: 'https://unfellable-unrebukable-lisbeth.ngrok-free.dev', 
+    webhookId: '4f2687a9-969d-4edf-8635-8f7aa23f3e68',
+    showLauncher: false, // Isse n8n ka apna pink bubble gayab ho jayega
+    showWelcomeScreen: true,
+    title: 'GK Printers AI Assistant',
+    welcomeMessage: 'Namaste! GK Printers mein aapka swagat hai.',
+    backgroundColor: '#007bff',
+});
     </script>
 </body>
 </html>
+
