@@ -592,7 +592,7 @@ NEW: CTA Button Styles
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmin(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1rem;    
     }
 
@@ -620,4 +620,12 @@ NEW: CTA Button Styles
     .service-card-content h2 {
         text-align: center; /* Center the title on mobile */
     }
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
