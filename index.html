@@ -67,8 +67,7 @@
                 <div class="hero-buttons">
                     <a href="contact.html#quote-form" class="btn btn-primary">WhatsApp</a>
                     <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-                    <button onclick="toggleChat()" class="btn btn-primary">AI Agent</button>
-                </div>
+                    </div>
             </div>
         </section>
 
@@ -85,7 +84,7 @@
                     <h3>Graphic Designing</h3>
                     <p>Professional graphic design services to create stunning visuals for your brand.</p>
                 </div>
-                </div>
+            </div>
             <div class="btn-container">
                 <a href="services.html" class="btn btn-primary">View All Services</a>
             </div>
@@ -118,26 +117,19 @@
         document.getElementById('menu-toggle').addEventListener('click', function() {
             document.getElementById('navbar').classList.toggle('active');
         });
-
-        // AI Agent Button Function
-        function toggleChat() {
-            const chatButton = document.querySelector('.n8n-chat-button');
-            if (chatButton) chatButton.click();
-        }
     </script>
 
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-       createChat({
-    host: 'https://unfellable-unrebukable-lisbeth.ngrok-free.dev', 
-    webhookId: '4f2687a9-969d-4edf-8635-8f7aa23f3e68',
-    showLauncher: false, // Isse n8n ka apna pink bubble gayab ho jayega
-    showWelcomeScreen: true,
-    title: 'GK Printers AI Assistant',
-    welcomeMessage: 'Namaste! GK Printers mein aapka swagat hai.',
-    backgroundColor: '#007bff',
-});
+        createChat({
+            host: 'https://unfellable-unrebukable-lisbeth.ngrok-free.dev', 
+            webhookId: '4f2687a9-969d-4edf-8635-8f7aa23f3e68',
+            showLauncher: true, // Pink bubble (launcher) is now active
+            showWelcomeScreen: true,
+            title: 'GK Printers AI Assistant',
+            welcomeMessage: 'Namaste! Guru Kripa Printers mein aapka swagat hai.',
+            backgroundColor: '#007bff',
+        });
     </script>
 </body>
 </html>
-
