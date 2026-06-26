@@ -45,7 +45,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 5.5rem;
+    font-size: 3.5rem;
 }
 
 h2 {
@@ -343,25 +343,28 @@ p {
 .service-card {
     display: flex;
     align-items: center;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #FFC107;
+    border-radius: 18px;
     padding: 2rem;
     margin-bottom: 2rem;
-    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+    transition: all .35s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,.18);
 }
 
-.service-card img {
-    /* Using max-width/height here to ensure better compatibility with lazy loading */
-    max-width: 150px; 
-    height: auto;
-    margin-right: 2rem;
-    flex-shrink: 0;
-    border-radius: 8px; /* Added rounded corners to images for better look */
+.service-card img{
+
+    max-width:180px;
+    height:180px;
+    object-fit:cover;
+    margin-right:2rem;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
 /* Fix 1: Ensures the content area takes up the remaining space and stacks elements vertically (for CTA) */
@@ -375,10 +378,13 @@ p {
 
 /* Fix 2: Layout Fix - Overrides global H2 center alignment to LEFT align the service title */
 .service-card-content h2 {
-    text-align: left; /* THIS IS THE KEY FIX for the layout issue */
+    text-align: left;
     margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    margin-bottom: .8rem;
+
+    color: #0F172A;
+    font-size: 2.3rem;
+    font-weight: 700;
 }
 
 .service-card.reverse {
@@ -393,31 +399,26 @@ p {
 /* ---------------------------------------------
 NEW: CTA Button Styles 
 --------------------------------------------- */
-.cta-button {
-    /* Basic Appearance */
-    display: inline-block;
-    align-self: flex-start; /* Aligns button to the left */
-    margin-top: 15px; /* Adds space above the button */
-    padding: 10px 20px;
-    
-    /* Aesthetics */
-    background-color: #3f51b5; /* Primary brand color (use your theme color) */
-    color: #ffffff; 
-    text-align: center;
-    text-decoration: none; /* Removes underline from the link */
-    font-weight: 600;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    
-    /* Ensure it doesn't stretch too wide on desktop */
-    max-width: 250px; 
-}
+.cta-button{
 
+    display:inline-block;
+    align-self:flex-start;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#0F172A;
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(15,23,42,.25);
+}
 /* Hover and Active Effects (Crucial for good UX) */
-.cta-button:hover {
-    background-color: #303f9f; /* Slightly darker shade on hover */
-    transform: translateY(-2px); /* Subtle lift effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.cta-button:hover{
+
+    background:#1E293B;
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(15,23,42,.35);
 }
 
 /* Gallery Page Specific - FINAL CODE */
