@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --background-color: #f8f9fa;
+    --primary-color: #FFC107;
+    --primary-hover: #01459d;
+
+    --secondary-color: #0F172A;
+    --secondary-hover: #1E293B;
+
+    --background-color: transparent;
+
     --text-color: #333;
     --heading-color: #212529;
-    --light-gray: #e9ecef;
-    /* Added for clickable contact links */
+
+    --light-gray: transparent;
+
     --contact-link-color: var(--primary-color);
-    --contact-link-hover: #0056b3; 
+    --contact-link-hover: var(--primary-hover);
 }
 
 * {
@@ -39,7 +45,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 5.5rem;
 }
 
 h2 {
@@ -117,11 +123,14 @@ p {
 
 /* Hero Section */
 .hero-section {
-    background: url('../images/hero-banner1.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
+    background: url('../images/hero-banner2.jpg') center/cover no-repeat;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    text-align: center;
+    color: white;
 }
 
 .hero-section::before {
@@ -131,7 +140,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 
@@ -165,23 +174,25 @@ p {
 
 .btn-primary {
     background-color: var(--primary-color);
-    color: #fff;
+    color: #0F172A;
+    border: none;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-hover);
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background-color: #fff;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
     margin-left: 1rem;
 }
 
 .btn-secondary:hover {
-    background-color: var(--light-gray);
+    background: #FFFFFF;
+    color: #0F172A;
     transform: translateY(-2px);
 }
 
