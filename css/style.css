@@ -1,643 +1,347 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-:root {
-    --primary-color: #FFC107;
-    --primary-hover: #01459d;
-
-    --secondary-color: #0F172A;
-    --secondary-hover: #1E293B;
-
-    --background-color: transparent;
-
-    --text-color: #333;
-    --heading-color: #212529;
-
-    --light-gray: transparent;
-
-    --contact-link-color: var(--primary-color);
-    --contact-link-hover: var(--primary-hover);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    /* FINAL FONT CHANGE for professional look and mobile readability */
-    font-family: 'Poppins', sans-serif; 
-    line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1, h2, h3 {
-    color: var(--heading-color);
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-h1 {
-    font-size: 3.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-    /* GLOBAL H2: Kept centered for page titles/sections */
-    text-align: center; 
-    margin-bottom: 2rem;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-/* Header */
-.header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-/* Logo Image Styling */
-.logo img {
-    height: 60px;
-    width: auto;
-    vertical-align: middle;
-}
-
-/* Logo Text Styling */
-.logo-text {
-    margin-left: 10px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.navbar a {
-    color: var(--heading-color);
-    text-decoration: none;
-    margin-left: 2rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    font-size: 1rem;
-    display: inline-block;
-}
-
-.navbar a:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-
-.menu-toggle {
-    display: block; 
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: relative;
-    z-index: 1001;
-}
-
-
-/* Hero Section */
-.hero-section {
-    background: url('../images/hero-banner2.jpg') center/cover no-repeat;
-    min-height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 5.5rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
-}
-
-.tagline {
-    font-size: 1.25rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: #0F172A;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
-    margin-left: 1rem;
-}
-
-.btn-secondary:hover {
-    background: #FFFFFF;
-    color: #0F172A;
-    transform: translateY(-2px);
-}
-
-.btn-container {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-/* Services Overview on Homepage */
-.services-overview {
-    padding: 4rem 2rem;
-    background-color: #fff;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.service-item {
-    text-align: center;
-    padding: 2rem;
-    background: var(--light-gray);
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.service-item img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
-}
-
-/* Testimonials */
-.testimonials {
-    background-color: var(--background-color);
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.testimonial-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.testimonial-card {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-width: 350px;
-    text-align: left;
-}
-
-.testimonial-card p {
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-.testimonial-card cite {
-    display: block;
-    text-align: right;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-/* Footer */
-.footer {
-    background-color: var(--heading-color);
-    color: #fff;
-    padding: 3rem 2rem;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-}
-
-.footer-section h4 {
-    color: #fff;
-    margin-bottom: 1rem;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-section a:hover {
-    color: var(--primary-color);
-}
-
-.social-icons a {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.social-icons a:hover {
-    transform: scale(1.1);
-}
-
-.copyright {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-/* About Page Specific */
-.about-section {
-    padding: 4rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,4,8,0.1);
-    margin-top: 2rem;
-}
-
-/* Services Page Specific */
-.services-page-container {
-    padding: 4rem 2rem;
-}
-
-.service-card {
-    display: flex;
-    align-items: center;
-    background: #FFC107;
-    border-radius: 18px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border: 1px solid rgba(0,0,0,0.08);
-    box-shadow: 0 15px 35px rgba(0,0,0,.12);
-    transition: all .35s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 45px rgba(0,0,0,.18);
-}
-
-.service-card img{
-
-    max-width:180px;
-    height:180px;
-    object-fit:cover;
-    margin-right:2rem;
-    border-radius:14px;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-}
-
-/* Fix 1: Ensures the content area takes up the remaining space and stacks elements vertically (for CTA) */
-.service-card-content {
-    flex-grow: 1; /* Allows content to take up available space */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
-    height: 100%;
-}
-
-/* Fix 2: Layout Fix - Overrides global H2 center alignment to LEFT align the service title */
-.service-card-content h2 {
-    text-align: left;
-    margin-top: 0;
-    margin-bottom: .8rem;
-
-    color: #0F172A;
-    font-size: 2.3rem;
-    font-weight: 700;
-}
-
-.service-card.reverse {
-    flex-direction: row-reverse;
-}
-
-.service-card.reverse img {
-    margin-left: 2rem;
-    margin-right: 0;
-}
-
-/* ---------------------------------------------
-NEW: CTA Button Styles 
---------------------------------------------- */
-.cta-button{
-
-    display:inline-block;
-    align-self:flex-start;
-    margin-top:20px;
-    padding:14px 28px;
-    background:#0F172A;
-    color:#fff;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-    box-shadow:0 8px 20px rgba(15,23,42,.25);
-}
-/* Hover and Active Effects (Crucial for good UX) */
-.cta-button:hover{
-
-    background:#1E293B;
-    transform:translateY(-3px);
-    box-shadow:0 15px 30px rgba(15,23,42,.35);
-}
-
-/* Gallery Page Specific - FINAL CODE */
-.gallery-section {
-    padding: 3rem 1rem; 
-    background-color: #f9f9f9; 
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-    gap: 1.5rem; 
-    justify-items: center; 
-    align-items: center; 
-}
-
-.gallery-item {
-    position: relative; 
-    height: 250px; 
-    width: 100%; 
-    overflow: hidden; 
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #ffffff; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px) scale(1.02); 
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-.gallery-item img {
-    max-width: 100%; 
-    max-height: 100%; 
-    width: auto; 
-    height: auto; 
-    object-fit: contain; 
-    display: block;
-}
-/* Contact Page Specific */
-.contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 4rem 2rem;
-}
-
-.contact-info, .contact-form, .contact-map {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 2rem;
-    flex: 1;
-    min-width: 300px;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form label {
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.contact-form input, .contact-form textarea {
-    padding: 10px;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    align-self: flex-start;
-}
-
-.contact-info h3, .contact-form h3 {
-    margin-bottom: 1.5rem;
-}
-
-.contact-info p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.contact-info i {
-    color: var(--primary-color);
-    margin-right: 10px;
-    font-size: 1.2rem;
-}
-/* NEW: Styles for Clickable Phone/Email links */
-.contact-info .contact-link {
-    text-decoration: none; /* Remove default underline */
-    color: var(--contact-link-color); /* Use the primary color */
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.contact-info .contact-link:hover {
-    color: var(--contact-link-hover); /* Slightly darker color on hover */
-    text-decoration: underline; /* Add underline on hover for clarity */
-}
-/* END NEW STYLES */
-
-.contact-map {
-    height: 400px;
-    overflow: hidden;
-}
-
-.contact-map iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* Responsive Design */
-
-/* Responsive Design - Desktop Navigation Fix */
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none;    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex, Banner, Digital Printing Services in Bhopal | Guru Kripa Printers</title>
+    <meta name="description" content="Guru Kripa Printers offers comprehensive services including Banner, Billboard, Visiting Card, Marriage Card, and Flyer Printing with expert Graphic Designing in Bhopal. Get a free quote today!">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Banner and Billboard Printing",
+      "name": "High-Quality Flex Banner and Billboard Printing Service",
+      "description": "Custom design and large-format printing for weather-resistant flex banners, vinyl, and outdoor billboards in Bhopal and nearby areas.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Guru Kripa Printers",
+        "url": "https://alok891.github.io/Gurukripa-printers/"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Bhopal"
+      }
     }
-    .navbar {
-        display: flex !important;
-        justify-content: flex-end;    
-        flex-direction: row;
-        position: static;    
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
-        width: auto;
-    }
-    .navbar a {
-        margin-left: 2rem;
-        display: inline-block;
-    }
-}
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+    <link rel="canonical" href="https://alok891.github.io/Gurukripa-printers/services.html" />
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="Guru Kripa Printers">
+            <span class="logo-text"></span> 
+        </a>
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
 
-@media (max-width: 768px) {
-    /* Menu ko default roop se chhipa dein */
-    .navbar {
-        display: none;    
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px; /* Header ki height ke hisaab se adjust karein */
-        left: 0;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        padding: 1rem 0;
-        z-index: 999; 
-    }
+    <main class="services-main-bg">
+        <section class="services-header-section">
+            <div class="badge-title">OUR SERVICES</div>
+            <h1 class="services-main-title">Printing & Design Services</h1>
+            <p class="services-subtitle">High Quality Printing & Designing Solutions for Every Need</p>
+            <div class="title-decor-line"><span></span></div>
+        </section>
 
-    /* JavaScript se toggle hone par menu dikhega */
-    .navbar.active {
-        display: flex;    
-    }
+        <section class="services-grid-container">
+            
+            <div class="new-service-card theme-blue">
+                <div class="card-header-block">
+                    <div class="card-icon-circle"><i class="fas fa-print"></i></div>
+                    <h2>Printing Services</h2>
+                </div>
+                <div class="tags-container">
+                    <span class="tag-pill">Banner Printing</span>
+                    <span class="tag-pill">Flex Printing</span>
+                    <span class="tag-pill">Vinyl Printing</span>
+                    <span class="tag-pill">Star Flex Printing</span>
+                    <span class="tag-pill">Eco Solvent Printing</span>
+                    <span class="tag-pill">One Way Vision</span>
+                    <span class="tag-pill">Sunboard Printing</span>
+                    <span class="tag-pill">Foam Board Printing</span>
+                    <span class="tag-pill">ACP Sign Boards</span>
+                    <span class="tag-pill">Glow Sign Boards</span>
+                    <span class="tag-pill">Roll-up Standee</span>
+                    <span class="tag-pill">Backlit Printing</span>
+                    <span class="tag-pill">Frontlit Printing</span>
+                    <span class="tag-pill">Billboard Printing</span>
+                    <span class="tag-pill">Shop Sign Boards</span>
+                    <span class="tag-pill">Canvas Printing</span>
+                    <span class="tag-pill">Window Graphics</span>
+                    <span class="tag-pill">Vehicle Branding</span>
+                    <span class="tag-pill">Wall Graphics</span>
+                    <span class="tag-pill">Floor Graphics</span>
+                </div>
+                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
+            </div>
 
-    /* Hamburger Icon ko mobile par dikha dein */
-    .menu-toggle {
-        display: block;
-    }
+            <div class="new-service-card theme-pink">
+                <div class="card-header-block">
+                    <div class="card-icon-circle"><i class="fas fa-pen-nib"></i></div>
+                    <h2>Graphic Designing</h2>
+                </div>
+                <div class="tags-container">
+                    <span class="tag-pill">Logo Design</span>
+                    <span class="tag-pill">Banner Design</span>
+                    <span class="tag-pill">Visiting Card Design</span>
+                    <span class="tag-pill">Brochure Design</span>
+                    <span class="tag-pill">Flyer Design</span>
+                    <span class="tag-pill">Pamphlet Design</span>
+                    <span class="tag-pill">Social Media Post Design</span>
+                    <span class="tag-pill">Instagram Post Design</span>
+                    <span class="tag-pill">Facebook Banner Design</span>
+                    <span class="tag-pill">YouTube Thumbnail Design</span>
+                    <span class="tag-pill">Menu Card Design</span>
+                    <span class="tag-pill">Invitation Card Design</span>
+                    <span class="tag-pill">Wedding Card Design</span>
+                    <span class="tag-pill">Certificate Design</span>
+                    <span class="tag-pill">Letterhead Design</span>
+                    <span class="tag-pill">ID Card Design</span>
+                    <span class="tag-pill">Sticker Design</span>
+                    <span class="tag-pill">Packaging Design</span>
+                    <span class="tag-pill">Book Cover Design</span>
+                    <span class="tag-pill">Custom Graphic Design</span>
+                </div>
+                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
+            </div>
+
+            <div class="new-service-card theme-green">
+                <div class="card-header-block">
+                    <div class="card-icon-circle"><i class="fas fa-briefcase"></i></div>
+                    <h2>Business Branding</h2>
+                </div>
+                <div class="tags-container">
+                    <span class="tag-pill">Visiting Cards</span>
+                    <span class="tag-pill">Premium Visiting Cards</span>
+                    <span class="tag-pill">PVC Visiting Cards</span>
+                    <span class="tag-pill">Letterheads</span>
+                    <span class="tag-pill">Envelopes</span>
+                    <span class="tag-pill">Company Profile</span>
+                    <span class="tag-pill">Brochures</span>
+                    <span class="tag-pill">Catalogues</span>
+                    <span class="tag-pill">Bill Books</span>
+                    <span class="tag-pill">Invoice Books</span>
+                    <span class="tag-pill">Receipt Books</span>
+                    <span class="tag-pill">Rubber Stamps</span>
+                    <span class="tag-pill">Name Plates</span>
+                    <span class="tag-pill">Office Signage</span>
+                    <span class="tag-pill">Employee ID Cards</span>
+                    <span class="tag-pill">Business Stickers</span>
+                    <span class="tag-pill">Labels</span>
+                    <span class="tag-pill">Packaging Boxes</span>
+                </div>
+                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
+            </div>
+
+            <div class="new-service-card theme-purple">
+                <div class="card-header-block">
+                    <div class="card-icon-circle"><i class="fas fa-gift"></i></div>
+                    <h2>Personalized Printing</h2>
+                </div>
+                <div class="tags-container">
+                    <span class="tag-pill">Mug Printing</span>
+                    <span class="tag-pill">T-Shirt Printing</span>
+                    <span class="tag-pill">Cap Printing</span>
+                    <span class="tag-pill">Keychains</span>
+                    <span class="tag-pill">Photo Frames</span>
+                    <span class="tag-pill">Photo Printing</span>
+                    <span class="tag-pill">Calendar Printing</span>
+                    <span class="tag-pill">Custom Gifts</span>
+                    <span class="tag-pill">Mouse Pads</span>
+                    <span class="tag-pill">Cushion Printing</span>
+                    <span class="tag-pill">Mobile Cover Printing</span>
+                    <span class="tag-pill">Bottle Printing</span>
+                </div>
+                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
+            </div>
+
+            <div class="new-service-card theme-orange">
+                <div class="card-header-block">
+                    <div class="card-icon-circle"><i class="fas fa-heart"></i></div>
+                    <h2>Event & Wedding Printing</h2>
+                </div>
+                <div class="tags-container">
+                    <span class="tag-pill">Wedding Cards</span>
+                    <span class="tag-pill">Reception Cards</span>
+                    <span class="tag-pill">Birthday Invitations</span>
+                    <span class="tag-pill">Baby Shower Cards</span>
+                    <span class="tag-pill">Anniversary Cards</span>
+                    <span class="tag-pill">Event Passes</span>
+                    <span class="tag-pill">Event Badges</span>
+                    <span class="tag-pill">Stage Backdrops</span>
+                    <span class="tag-pill">Welcome Boards</span>
+                    <span class="tag-pill">Direction Boards</span>
+                    <span class="tag-pill">Selfie Frames</span>
+                    <span class="tag-pill">Welcome Standees</span>
+                </div>
+                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
+            </div>
+
+            <div class="new-service-card theme-teal">
+                <div class="card-header-block">
+                    <div class="card-icon-circle"><i class="fas fa-utensils"></i></div>
+                    <h2>Restaurant & Cafe Printing</h2>
+                </div>
+                <div class="tags-container">
+                    <span class="tag-pill">Menu Cards</span>
+                    <span class="tag-pill">QR Code Menus</span>
+                    <span class="tag-pill">Table Tents</span>
+                    <span class="tag-pill">Food Packaging</span>
+                    <span class="tag-pill">Stickers</span>
+                    <span class="tag-pill">Paper Bags</span>
+                    <span class="tag-pill">Bill Books</span>
+                    <span class="tag-pill">Promotional Flyers</span>
+                    <span class="tag-pill">Posters</span>
+                </div>
+                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
+            </div>
+
+            <div class="new-service-card theme-darkblue">
+                <div class="card-header-block">
+                    <div class="card-icon-circle"><i class="fas fa-user-graduate"></i></div>
+                    <h2>School & College Printing</h2>
+                </div>
+                <div class="tags-container">
+                    <span class="tag-pill">ID Cards</span>
+                    <span class="tag-pill">Report Cards</span>
+                    <span class="tag-pill">Certificates</span>
+                    <span class="tag-pill">Admit Cards</span>
+                    <span class="tag-pill">Mark Sheets</span>
+                    <span class="tag-pill">Prospectus</span>
+                    <span class="tag-pill">Brochures</span>
+                    <span class="tag-pill">Event Banners</span>
+                    <span class="tag-pill">Notice Boards</span>
+                    <span class="tag-pill">Lanyards</span>
+                </div>
+                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
+            </div>
+
+            <div class="new-service-card theme-amber">
+                <div class="card-header-block">
+                    <div class="card-icon-circle"><i class="fas fa-bullhorn"></i></div>
+                    <h2>Marketing Materials</h2>
+                </div>
+                <div class="tags-container">
+                    <span class="tag-pill">Flyers</span>
+                    <span class="tag-pill">Pamphlets</span>
+                    <span class="tag-pill">Posters</span>
+                    <span class="tag-pill">Brochures</span>
+                    <span class="tag-pill">Catalogues</span>
+                    <span class="tag-pill">Door Hangers</span>
+                    <span class="tag-pill">Coupons</span>
+                    <span class="tag-pill">Tent Cards</span>
+                    <span class="tag-pill">Danglers</span>
+                    <span class="tag-pill">Shelf Talkers</span>
+                </div>
+                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
+            </div>
+        </section>
+
+        <section class="value-badges-section">
+            <div class="value-badge-item">
+                <div class="badge-icon"><i class="fas fa-award"></i></div>
+                <h5>Premium Quality</h5>
+                <p>Top quality materials and latest technology</p>
+            </div>
+            <div class="value-badge-item">
+                <div class="badge-icon"><i class="fas fa-clock"></i></div>
+                <h5>On Time Delivery</h5>
+                <p>Fast and reliable delivery on time</p>
+            </div>
+            <div class="value-badge-item">
+                <div class="badge-icon"><i class="fas fa-rupee-sign"></i></div>
+                <h5>Affordable Pricing</h5>
+                <p>Best prices with great value</p>
+            </div>
+            <div class="value-badge-item">
+                <div class="badge-icon"><i class="fas fa-magic"></i></div>
+                <h5>Custom Designs</h5>
+                <p>Unique and creative designs for you</p>
+            </div>
+            <div class="value-badge-item">
+                <div class="badge-icon"><i class="fas fa-headset"></i></div>
+                <h5>Customer Support</h5>
+                <p>We're here to help you anytime</p>
+            </div>
+            <div class="value-badge-item">
+                <div class="badge-icon"><i class="fas fa-check-circle"></i></div>
+                <h5>100% Satisfaction</h5>
+                <p>Quality and satisfaction guaranteed</p>
+            </div>
+        </section>
+
+        <section class="custom-cta-banner-wrapper">
+            <div class="custom-cta-banner-box">
+                <div class="banner-text-side">
+                    <h3>Can't find what you're looking for?</h3>
+                    <p>We provide many more custom printing and design solutions.</p>
+                    <div class="banner-features-row">
+                        <span><i class="far fa-check-square"></i> Bulk Orders</span>
+                        <span><i class="far fa-check-square"></i> Custom Sizes</span>
+                        <span><i class="far fa-check-square"></i> Same Day Printing*</span>
+                        <span><i class="far fa-check-square"></i> Urgent Orders</span>
+                        <span><i class="far fa-check-square"></i> Business Branding</span>
+                        <span><i class="far fa-check-square"></i> Custom Design</span>
+                    </div>
+                </div>
+                <div class="banner-btn-side">
+                    <a href="contact.html#quote-form" class="banner-yellow-btn">Request Custom Quote <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Guru Kripa Printers</h4>
+                <p>Your trusted partner for all printing and design solutions in Bhopal.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Bhopal, MP, India</p>
+                <p>Phone: +91 9827268725</p>
+                <p>Email: rakeshyagyik77@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; <span id="year">2024</span> Guru Kripa Printers. All rights reserved.
+        </div>
+    </footer>
     
-    /* Hero Section: Padding aur Font Size kam karna */
-    .hero-section {
-        padding: 80px 10px;    
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;    
-    }
-    
-    /* GALLERY SECTION: Grid aur Padding ko theek karna */
-    .gallery-section {
-        padding: 2rem 0.5rem;    
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1rem;    
-    }
-
-    .gallery-item {
-        height: 200px;    
-    }
-
-    /* Mobile Responsiveness for CTA */
-    .cta-button {
-        /* Makes the button full width on small screens for easy tapping */
-        max-width: 100%; 
-        width: 100%;
-    }
-
-    /* Service Card responsive layout fix */
-    .service-card, .service-card.reverse {
-        flex-direction: column; /* Force vertical stacking on mobile */
-        text-align: center;
-    }
-
-    .service-card img, .service-card.reverse img {
-        margin: 1rem auto; /* Center the image on mobile */
-    }
-
-    .service-card-content h2 {
-        text-align: center; /* Center the title on mobile */
-    }
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('navbar').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
