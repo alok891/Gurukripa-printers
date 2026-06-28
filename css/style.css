@@ -1,347 +1,1035 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex, Banner, Digital Printing Services in Bhopal | Guru Kripa Printers</title>
-    <meta name="description" content="Guru Kripa Printers offers comprehensive services including Banner, Billboard, Visiting Card, Marriage Card, and Flyer Printing with expert Graphic Designing in Bhopal. Get a free quote today!">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Banner and Billboard Printing",
-      "name": "High-Quality Flex Banner and Billboard Printing Service",
-      "description": "Custom design and large-format printing for weather-resistant flex banners, vinyl, and outdoor billboards in Bhopal and nearby areas.",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Guru Kripa Printers",
-        "url": "https://alok891.github.io/Gurukripa-printers/"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Bhopal"
-      }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #FFC107;
+    --primary-hover: #01459d;
+
+    --secondary-color: #0F172A;
+    --secondary-hover: #1E293B;
+
+    --background-color: transparent;
+
+    --text-color: #333;
+    --heading-color: #212529;
+
+    --light-gray: transparent;
+
+    --contact-link-color: var(--primary-color);
+    --contact-link-hover: var(--primary-hover);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* FINAL FONT CHANGE for professional look and mobile readability */
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    /* GLOBAL H2: Kept centered for page titles/sections */
+    text-align: center; 
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Logo Image Styling */
+.logo img {
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Logo Text Styling */
+.logo-text {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.navbar a {
+    color: var(--heading-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+.menu-toggle {
+    display: block; 
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+
+/* Hero Section */
+.hero-section {
+    background: url('../images/hero-banner2.jpg') center/cover no-repeat;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 5.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #0F172A;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    margin-left: 1rem;
+}
+
+.btn-secondary:hover {
+    background: #FFFFFF;
+    color: #0F172A;
+    transform: translateY(-2px);
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Services Overview on Homepage */
+.services-overview {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-gray);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: var(--background-color);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 350px;
+    text-align: left;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card cite {
+    display: block;
+    text-align: right;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--heading-color);
+    color: #fff;
+    padding: 3rem 2rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* About Page Specific */
+.about-section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,4,8,0.1);
+    margin-top: 2rem;
+}
+
+/* Services Page Specific */
+.services-page-container {
+    padding: 4rem 2rem;
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    background: #FFC107;
+    border-radius: 18px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+    transition: all .35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,.18);
+}
+
+.service-card img{
+
+    max-width:180px;
+    height:180px;
+    object-fit:cover;
+    margin-right:2rem;
+    border-radius:14px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+/* Fix 1: Ensures the content area takes up the remaining space and stacks elements vertically (for CTA) */
+.service-card-content {
+    flex-grow: 1; /* Allows content to take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    height: 100%;
+}
+
+/* Fix 2: Layout Fix - Overrides global H2 center alignment to LEFT align the service title */
+.service-card-content h2 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: .8rem;
+
+    color: #0F172A;
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.service-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-card.reverse img {
+    margin-left: 2rem;
+    margin-right: 0;
+}
+
+/* ---------------------------------------------
+NEW: CTA Button Styles 
+--------------------------------------------- */
+.cta-button{
+
+    display:inline-block;
+    align-self:flex-start;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#0F172A;
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(15,23,42,.25);
+}
+/* Hover and Active Effects (Crucial for good UX) */
+.cta-button:hover{
+
+    background:#1E293B;
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(15,23,42,.35);
+}
+
+/* Gallery Page Specific - FINAL CODE */
+.gallery-section {
+    padding: 3rem 1rem; 
+    background-color: #f9f9f9; 
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 1.5rem; 
+    justify-items: center; 
+    align-items: center; 
+}
+
+.gallery-item {
+    position: relative; 
+    height: 250px; 
+    width: 100%; 
+    overflow: hidden; 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px) scale(1.02); 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    max-width: 100%; 
+    max-height: 100%; 
+    width: auto; 
+    height: auto; 
+    object-fit: contain; 
+    display: block;
+}
+/* Contact Page Specific */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+.contact-info, .contact-form, .contact-map {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    align-self: flex-start;
+}
+
+.contact-info h3, .contact-form h3 {
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+/* NEW: Styles for Clickable Phone/Email links */
+.contact-info .contact-link {
+    text-decoration: none; /* Remove default underline */
+    color: var(--contact-link-color); /* Use the primary color */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-info .contact-link:hover {
+    color: var(--contact-link-hover); /* Slightly darker color on hover */
+    text-decoration: underline; /* Add underline on hover for clarity */
+}
+/* END NEW STYLES */
+
+.contact-map {
+    height: 400px;
+    overflow: hidden;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+
+/* Responsive Design - Desktop Navigation Fix */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;    
     }
-    </script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/jpg" href="images/logo.jpg">
-    <link rel="canonical" href="https://alok891.github.io/Gurukripa-printers/services.html" />
-</head>
-<body>
-    <header class="header">
-        <a href="index.html" class="logo">
-            <img src="images/logo.jpg" alt="Guru Kripa Printers">
-            <span class="logo-text"></span> 
-        </a>
-        <nav class="navbar" id="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="menu-toggle" id="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-    </header>
+    .navbar {
+        display: flex !important;
+        justify-content: flex-end;    
+        flex-direction: row;
+        position: static;    
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        width: auto;
+    }
+    .navbar a {
+        margin-left: 2rem;
+        display: inline-block;
+    }
+}
 
-    <main class="services-main-bg">
-        <section class="services-header-section">
-            <div class="badge-title">OUR SERVICES</div>
-            <h1 class="services-main-title">Printing & Design Services</h1>
-            <p class="services-subtitle">High Quality Printing & Designing Solutions for Every Need</p>
-            <div class="title-decor-line"><span></span></div>
-        </section>
+@media (max-width: 768px) {
+    /* Menu ko default roop se chhipa dein */
+    .navbar {
+        display: none;    
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Header ki height ke hisaab se adjust karein */
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 1rem 0;
+        z-index: 999; 
+    }
 
-        <section class="services-grid-container">
-            
-            <div class="new-service-card theme-blue">
-                <div class="card-header-block">
-                    <div class="card-icon-circle"><i class="fas fa-print"></i></div>
-                    <h2>Printing Services</h2>
-                </div>
-                <div class="tags-container">
-                    <span class="tag-pill">Banner Printing</span>
-                    <span class="tag-pill">Flex Printing</span>
-                    <span class="tag-pill">Vinyl Printing</span>
-                    <span class="tag-pill">Star Flex Printing</span>
-                    <span class="tag-pill">Eco Solvent Printing</span>
-                    <span class="tag-pill">One Way Vision</span>
-                    <span class="tag-pill">Sunboard Printing</span>
-                    <span class="tag-pill">Foam Board Printing</span>
-                    <span class="tag-pill">ACP Sign Boards</span>
-                    <span class="tag-pill">Glow Sign Boards</span>
-                    <span class="tag-pill">Roll-up Standee</span>
-                    <span class="tag-pill">Backlit Printing</span>
-                    <span class="tag-pill">Frontlit Printing</span>
-                    <span class="tag-pill">Billboard Printing</span>
-                    <span class="tag-pill">Shop Sign Boards</span>
-                    <span class="tag-pill">Canvas Printing</span>
-                    <span class="tag-pill">Window Graphics</span>
-                    <span class="tag-pill">Vehicle Branding</span>
-                    <span class="tag-pill">Wall Graphics</span>
-                    <span class="tag-pill">Floor Graphics</span>
-                </div>
-                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
-            </div>
+    /* JavaScript se toggle hone par menu dikhega */
+    .navbar.active {
+        display: flex;    
+    }
 
-            <div class="new-service-card theme-pink">
-                <div class="card-header-block">
-                    <div class="card-icon-circle"><i class="fas fa-pen-nib"></i></div>
-                    <h2>Graphic Designing</h2>
-                </div>
-                <div class="tags-container">
-                    <span class="tag-pill">Logo Design</span>
-                    <span class="tag-pill">Banner Design</span>
-                    <span class="tag-pill">Visiting Card Design</span>
-                    <span class="tag-pill">Brochure Design</span>
-                    <span class="tag-pill">Flyer Design</span>
-                    <span class="tag-pill">Pamphlet Design</span>
-                    <span class="tag-pill">Social Media Post Design</span>
-                    <span class="tag-pill">Instagram Post Design</span>
-                    <span class="tag-pill">Facebook Banner Design</span>
-                    <span class="tag-pill">YouTube Thumbnail Design</span>
-                    <span class="tag-pill">Menu Card Design</span>
-                    <span class="tag-pill">Invitation Card Design</span>
-                    <span class="tag-pill">Wedding Card Design</span>
-                    <span class="tag-pill">Certificate Design</span>
-                    <span class="tag-pill">Letterhead Design</span>
-                    <span class="tag-pill">ID Card Design</span>
-                    <span class="tag-pill">Sticker Design</span>
-                    <span class="tag-pill">Packaging Design</span>
-                    <span class="tag-pill">Book Cover Design</span>
-                    <span class="tag-pill">Custom Graphic Design</span>
-                </div>
-                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
-            </div>
-
-            <div class="new-service-card theme-green">
-                <div class="card-header-block">
-                    <div class="card-icon-circle"><i class="fas fa-briefcase"></i></div>
-                    <h2>Business Branding</h2>
-                </div>
-                <div class="tags-container">
-                    <span class="tag-pill">Visiting Cards</span>
-                    <span class="tag-pill">Premium Visiting Cards</span>
-                    <span class="tag-pill">PVC Visiting Cards</span>
-                    <span class="tag-pill">Letterheads</span>
-                    <span class="tag-pill">Envelopes</span>
-                    <span class="tag-pill">Company Profile</span>
-                    <span class="tag-pill">Brochures</span>
-                    <span class="tag-pill">Catalogues</span>
-                    <span class="tag-pill">Bill Books</span>
-                    <span class="tag-pill">Invoice Books</span>
-                    <span class="tag-pill">Receipt Books</span>
-                    <span class="tag-pill">Rubber Stamps</span>
-                    <span class="tag-pill">Name Plates</span>
-                    <span class="tag-pill">Office Signage</span>
-                    <span class="tag-pill">Employee ID Cards</span>
-                    <span class="tag-pill">Business Stickers</span>
-                    <span class="tag-pill">Labels</span>
-                    <span class="tag-pill">Packaging Boxes</span>
-                </div>
-                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
-            </div>
-
-            <div class="new-service-card theme-purple">
-                <div class="card-header-block">
-                    <div class="card-icon-circle"><i class="fas fa-gift"></i></div>
-                    <h2>Personalized Printing</h2>
-                </div>
-                <div class="tags-container">
-                    <span class="tag-pill">Mug Printing</span>
-                    <span class="tag-pill">T-Shirt Printing</span>
-                    <span class="tag-pill">Cap Printing</span>
-                    <span class="tag-pill">Keychains</span>
-                    <span class="tag-pill">Photo Frames</span>
-                    <span class="tag-pill">Photo Printing</span>
-                    <span class="tag-pill">Calendar Printing</span>
-                    <span class="tag-pill">Custom Gifts</span>
-                    <span class="tag-pill">Mouse Pads</span>
-                    <span class="tag-pill">Cushion Printing</span>
-                    <span class="tag-pill">Mobile Cover Printing</span>
-                    <span class="tag-pill">Bottle Printing</span>
-                </div>
-                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
-            </div>
-
-            <div class="new-service-card theme-orange">
-                <div class="card-header-block">
-                    <div class="card-icon-circle"><i class="fas fa-heart"></i></div>
-                    <h2>Event & Wedding Printing</h2>
-                </div>
-                <div class="tags-container">
-                    <span class="tag-pill">Wedding Cards</span>
-                    <span class="tag-pill">Reception Cards</span>
-                    <span class="tag-pill">Birthday Invitations</span>
-                    <span class="tag-pill">Baby Shower Cards</span>
-                    <span class="tag-pill">Anniversary Cards</span>
-                    <span class="tag-pill">Event Passes</span>
-                    <span class="tag-pill">Event Badges</span>
-                    <span class="tag-pill">Stage Backdrops</span>
-                    <span class="tag-pill">Welcome Boards</span>
-                    <span class="tag-pill">Direction Boards</span>
-                    <span class="tag-pill">Selfie Frames</span>
-                    <span class="tag-pill">Welcome Standees</span>
-                </div>
-                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
-            </div>
-
-            <div class="new-service-card theme-teal">
-                <div class="card-header-block">
-                    <div class="card-icon-circle"><i class="fas fa-utensils"></i></div>
-                    <h2>Restaurant & Cafe Printing</h2>
-                </div>
-                <div class="tags-container">
-                    <span class="tag-pill">Menu Cards</span>
-                    <span class="tag-pill">QR Code Menus</span>
-                    <span class="tag-pill">Table Tents</span>
-                    <span class="tag-pill">Food Packaging</span>
-                    <span class="tag-pill">Stickers</span>
-                    <span class="tag-pill">Paper Bags</span>
-                    <span class="tag-pill">Bill Books</span>
-                    <span class="tag-pill">Promotional Flyers</span>
-                    <span class="tag-pill">Posters</span>
-                </div>
-                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
-            </div>
-
-            <div class="new-service-card theme-darkblue">
-                <div class="card-header-block">
-                    <div class="card-icon-circle"><i class="fas fa-user-graduate"></i></div>
-                    <h2>School & College Printing</h2>
-                </div>
-                <div class="tags-container">
-                    <span class="tag-pill">ID Cards</span>
-                    <span class="tag-pill">Report Cards</span>
-                    <span class="tag-pill">Certificates</span>
-                    <span class="tag-pill">Admit Cards</span>
-                    <span class="tag-pill">Mark Sheets</span>
-                    <span class="tag-pill">Prospectus</span>
-                    <span class="tag-pill">Brochures</span>
-                    <span class="tag-pill">Event Banners</span>
-                    <span class="tag-pill">Notice Boards</span>
-                    <span class="tag-pill">Lanyards</span>
-                </div>
-                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
-            </div>
-
-            <div class="new-service-card theme-amber">
-                <div class="card-header-block">
-                    <div class="card-icon-circle"><i class="fas fa-bullhorn"></i></div>
-                    <h2>Marketing Materials</h2>
-                </div>
-                <div class="tags-container">
-                    <span class="tag-pill">Flyers</span>
-                    <span class="tag-pill">Pamphlets</span>
-                    <span class="tag-pill">Posters</span>
-                    <span class="tag-pill">Brochures</span>
-                    <span class="tag-pill">Catalogues</span>
-                    <span class="tag-pill">Door Hangers</span>
-                    <span class="tag-pill">Coupons</span>
-                    <span class="tag-pill">Tent Cards</span>
-                    <span class="tag-pill">Danglers</span>
-                    <span class="tag-pill">Shelf Talkers</span>
-                </div>
-                <a href="contact.html#quote-form" class="card-action-btn"><i class="fas fa-phone-alt"></i> Get Quote <i class="fas fa-arrow-right arrow-icon"></i></a>
-            </div>
-        </section>
-
-        <section class="value-badges-section">
-            <div class="value-badge-item">
-                <div class="badge-icon"><i class="fas fa-award"></i></div>
-                <h5>Premium Quality</h5>
-                <p>Top quality materials and latest technology</p>
-            </div>
-            <div class="value-badge-item">
-                <div class="badge-icon"><i class="fas fa-clock"></i></div>
-                <h5>On Time Delivery</h5>
-                <p>Fast and reliable delivery on time</p>
-            </div>
-            <div class="value-badge-item">
-                <div class="badge-icon"><i class="fas fa-rupee-sign"></i></div>
-                <h5>Affordable Pricing</h5>
-                <p>Best prices with great value</p>
-            </div>
-            <div class="value-badge-item">
-                <div class="badge-icon"><i class="fas fa-magic"></i></div>
-                <h5>Custom Designs</h5>
-                <p>Unique and creative designs for you</p>
-            </div>
-            <div class="value-badge-item">
-                <div class="badge-icon"><i class="fas fa-headset"></i></div>
-                <h5>Customer Support</h5>
-                <p>We're here to help you anytime</p>
-            </div>
-            <div class="value-badge-item">
-                <div class="badge-icon"><i class="fas fa-check-circle"></i></div>
-                <h5>100% Satisfaction</h5>
-                <p>Quality and satisfaction guaranteed</p>
-            </div>
-        </section>
-
-        <section class="custom-cta-banner-wrapper">
-            <div class="custom-cta-banner-box">
-                <div class="banner-text-side">
-                    <h3>Can't find what you're looking for?</h3>
-                    <p>We provide many more custom printing and design solutions.</p>
-                    <div class="banner-features-row">
-                        <span><i class="far fa-check-square"></i> Bulk Orders</span>
-                        <span><i class="far fa-check-square"></i> Custom Sizes</span>
-                        <span><i class="far fa-check-square"></i> Same Day Printing*</span>
-                        <span><i class="far fa-check-square"></i> Urgent Orders</span>
-                        <span><i class="far fa-check-square"></i> Business Branding</span>
-                        <span><i class="far fa-check-square"></i> Custom Design</span>
-                    </div>
-                </div>
-                <div class="banner-btn-side">
-                    <a href="contact.html#quote-form" class="banner-yellow-btn">Request Custom Quote <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>Guru Kripa Printers</h4>
-                <p>Your trusted partner for all printing and design solutions in Bhopal.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Bhopal, MP, India</p>
-                <p>Phone: +91 9827268725</p>
-                <p>Email: rakeshyagyik77@gmail.com</p>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; <span id="year">2024</span> Guru Kripa Printers. All rights reserved.
-        </div>
-    </footer>
+    /* Hamburger Icon ko mobile par dikha dein */
+    .menu-toggle {
+        display: block;
+    }
     
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('navbar').classList.toggle('active');
-        });
-    </script>
-</body>
-</html>
+    /* Hero Section: Padding aur Font Size kam karna */
+    .hero-section {
+        padding: 80px 10px;    
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;    
+    }
+    
+    /* GALLERY SECTION: Grid aur Padding ko theek karna */
+    .gallery-section {
+        padding: 2rem 0.5rem;    
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;    
+    }
+
+    .gallery-item {
+        height: 200px;    
+    }
+
+    /* Mobile Responsiveness for CTA */
+    .cta-button {
+        /* Makes the button full width on small screens for easy tapping */
+        max-width: 100%; 
+        width: 100%;
+    }
+
+    /* Service Card responsive layout fix */
+    .service-card, .service-card.reverse {
+        flex-direction: column; /* Force vertical stacking on mobile */
+        text-align: center;
+    }
+
+    .service-card img, .service-card.reverse img {
+        margin: 1rem auto; /* Center the image on mobile */
+    }
+
+    .service-card-content h2 {
+        text-align: center; /* Center the title on mobile */
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   NEW REAMPED SERVICES SECTION (MATCHING IMAGE LAYOUT)
+   ========================================================================== */
+
+.services-main-bg {
+    background-color: #fcfdfe;
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* Header Elements styling */
+.services-header-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.services-header-section .badge-title {
+    display: inline-block;
+    border: 1px solid #dcdfe6;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #485164;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.services-main-title {
+    font-size: 2.8rem;
+    color: #0b1a30;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.services-subtitle {
+    font-size: 1.1rem;
+    color: #667085;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.title-decor-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-decor-line span {
+    width: 60px;
+    height: 4px;
+    background-color: #ffc107;
+    border-radius: 2px;
+}
+
+/* Main Grid Layout */
+.services-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 0 20px;
+    align-items: start;
+}
+
+/* Card Structures */
+.new-service-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #eef1f6;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 520px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.card-header-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eef1f6;
+}
+
+.card-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.card-header-block h2 {
+    font-size: 1.35rem !important;
+    font-weight: 700;
+    margin: 0 !important;
+    text-align: left !important;
+}
+
+/* Interactive Color Theme Definitions mapping to Image colors */
+/* Blue Theme */
+.theme-blue { border-top: 4px solid #2563eb; }
+.theme-blue .card-icon-circle { background-color: #2563eb; }
+.theme-blue .card-header-block h2 { color: #2563eb; }
+.theme-blue .tag-pill { color: #1e3a8a; background: #eff6ff; }
+.theme-blue .card-action-btn { background-color: #2563eb; }
+.theme-blue .card-action-btn:hover { background-color: #1d4ed8; }
+
+/* Pink Theme */
+.theme-pink { border-top: 4px solid #db2777; }
+.theme-pink .card-icon-circle { background-color: #db2777; }
+.theme-pink .card-header-block h2 { color: #db2777; }
+.theme-pink .tag-pill { color: #9d174d; background: #fdf2f8; }
+.theme-pink .card-action-btn { background-color: #db2777; }
+.theme-pink .card-action-btn:hover { background-color: #be185d; }
+
+/* Green Theme */
+.theme-green { border-top: 4px solid #16a34a; }
+.theme-green .card-icon-circle { background-color: #16a34a; }
+.theme-green .card-header-block h2 { color: #16a34a; }
+.theme-green .tag-pill { color: #065f46; background: #f0fdf4; }
+.theme-green .card-action-btn { background-color: #16a34a; }
+.theme-green .card-action-btn:hover { background-color: #15803d; }
+
+/* Purple Theme */
+.theme-purple { border-top: 4px solid #7c3aed; }
+.theme-purple .card-icon-circle { background-color: #7c3aed; }
+.theme-purple .card-header-block h2 { color: #7c3aed; }
+.theme-purple .tag-pill { color: #5b21b6; background: #f5f3ff; }
+.theme-purple .card-action-btn { background-color: #7c3aed; }
+.theme-purple .card-action-btn:hover { background-color: #6d28d9; }
+
+/* Orange Theme */
+.theme-orange { border-top: 4px solid #ea580c; }
+.theme-orange .card-icon-circle { background-color: #ea580c; }
+.theme-orange .card-header-block h2 { color: #ea580c; }
+.theme-orange .tag-pill { color: #7c2d12; background: #fff7ed; }
+.theme-orange .card-action-btn { background-color: #ea580c; }
+.theme-orange .card-action-btn:hover { background-color: #c2410c; }
+
+/* Teal Theme */
+.theme-teal { border-top: 4px solid #0d9488; }
+.theme-teal .card-icon-circle { background-color: #0d9488; }
+.theme-teal .card-header-block h2 { color: #0d9488; }
+.theme-teal .tag-pill { color: #115e59; background: #f0fdfa; }
+.theme-teal .card-action-btn { background-color: #0d9488; }
+.theme-teal .card-action-btn:hover { background-color: #0f766e; }
+
+/* Dark Blue Theme */
+.theme-darkblue { border-top: 4px solid #1e3a8a; }
+.theme-darkblue .card-icon-circle { background-color: #1e3a8a; }
+.theme-darkblue .card-header-block h2 { color: #1e3a8a; }
+.theme-darkblue .tag-pill { color: #1e40af; background: #eff6ff; }
+.theme-darkblue .card-action-btn { background-color: #1e3a8a; }
+.theme-darkblue .card-action-btn:hover { background-color: #1d4ed8; }
+
+/* Amber/Yellow Theme */
+.theme-amber { border-top: 4px solid #d97706; }
+.theme-amber .card-icon-circle { background-color: #d97706; }
+.theme-amber .card-header-block h2 { color: #d97706; }
+.theme-amber .tag-pill { color: #78350f; background: #fffbeb; }
+.theme-amber .card-action-btn { background-color: #d97706; }
+.theme-amber .card-action-btn:hover { background-color: #b45309; }
+
+/* Pills Flexbox container */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px;
+    align-content: flex-start;
+    flex-grow: 1;
+}
+
+.tag-pill {
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    white-space: nowrap;
+}
+
+/* Call to action button layout inside cards */
+.card-action-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s ease;
+    margin-top: auto;
+}
+
+.card-action-btn .arrow-icon {
+    font-size: 0.85rem;
+    transition: transform 0.2s ease;
+}
+
+.card-action-btn:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* Lower Quality/Feature Grid Items Styling */
+.value-badges-section {
+    max-width: 1200px;
+    margin: 60px auto 40px auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    padding: 30px 20px;
+    border-top: 1px dashed #e4e7ed;
+    border-bottom: 1px dashed #e4e7ed;
+    text-align: center;
+}
+
+.value-badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.value-badge-item .badge-icon {
+    font-size: 1.6rem;
+    color: #e56b1a;
+    margin-bottom: 10px;
+}
+
+.value-badge-item h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.value-badge-item p {
+    font-size: 0.75rem;
+    color: #64748b;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Large Customized CTA Strip Banner block design */
+.custom-cta-banner-wrapper {
+    max-width: 1200px;
+    margin: 40px auto 20px auto;
+    padding: 0 20px;
+}
+
+.custom-cta-banner-box {
+    background-color: #0b1a30;
+    background-image: linear-gradient(135deg, #0b1a30 0%, #112544 100%);
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-text-side h3 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.banner-text-side p {
+    color: #ffc107;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.banner-features-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+}
+
+.banner-features-row span {
+    color: #cbd5e1;
+    font-size: 0.82rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.banner-features-row span i {
+    color: #ffc107;
+}
+
+.banner-btn-side {
+    flex-shrink: 0;
+}
+
+.banner-yellow-btn {
+    background-color: #ffc107;
+    color: #0b1a30;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.banner-yellow-btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* Modern Layout Responsiveness Queries Media Hooks */
+@media (max-width: 1024px) {
+    .services-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .value-badges-section {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid-container {
+        grid-template-columns: 1fr;
+    }
+    .services-main-title {
+        font-size: 2.1rem;
+    }
+    .custom-cta-banner-box {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    .banner-text-side h3, .banner-text-side p {
+        text-align: center;
+    }
+    .banner-features-row {
+        justify-content: center;
+    }
+    .banner-btn-side {
+        width: 100%;
+    }
+    .banner-yellow-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .value-badges-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .value-badges-section {
+        grid-template-columns: 1fr;
+    }
+}
