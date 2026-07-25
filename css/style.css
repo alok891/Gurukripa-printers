@@ -702,3 +702,28 @@ a {
     box-sizing: border-box !important;
   }
 }
+/* Fix Footer Cut Problem on Home, Gallery & About Pages */
+footer, .footer {
+  width: 100% !important;
+  height: auto !important; /* Fixed height hatane ke liye */
+  position: relative !important; /* Absolute position issue fix karne ke liye */
+  clear: both !important;
+  overflow: visible !important;
+  margin-top: 40px !important;
+  padding-bottom: 30px !important; /* Bottom spacing taaki cut na ho */
+  box-sizing: border-box !important;
+}
+
+/* Ensure Body/Main Wrapper doesn't clip footer */
+body, main, .main-container, .wrapper {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Push footer to bottom cleanly */
+footer, .footer {
+  margin-top: auto !important;
+}
