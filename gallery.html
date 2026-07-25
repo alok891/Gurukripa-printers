@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Guru Kripa Printers</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .gallery-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-card-body {
+            padding: 20px;
+            color: var(--text-dark);
+        }
+        .gallery-card-body h4 {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        .gallery-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            color: #25d366;
+            font-weight: 700;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Floating Navbar -->
+    <header class="header-wrapper">
+        <nav class="floating-navbar">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">gk</div>
+                <div class="logo-text">
+                    <h2>Guru Kripa</h2>
+                    <span>PRINTERS</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <a href="https://wa.me/919827268725?text=Hello%20Guru%20Kripa%20Printers,%20I%20have%20an%20inquiry%20regarding%20your%20services." target="_blank" class="btn-call"><i class="fa-brands fa-whatsapp"></i> Chat Now</a>
+        </nav>
+    </header>
+
+    <!-- Page Header Banner -->
+    <section class="hero-section" style="min-height: 40vh; padding-top: 160px; text-align: center;">
+        <div class="container">
+            <h1 class="hero-title">Our <span>Portfolio</span></h1>
+            <p class="hero-subtitle" style="margin: 0 auto;">Take a look at some of our recent print samples and creative work.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="gallery-grid">
+                
+                <!-- 1. Flex & Banner -->
+                <div class="gallery-card">
+                    <img src="images/Flex.png" alt="Flex and Banner Printing">
+                    <div class="gallery-card-body">
+                        <h4>Flex & Banner</h4>
+                        <p style="font-size: 13px; color: #64748B;">High-resolution large format printing for hoardings, shops, and events.</p>
+                        <a href="https://wa.me/919827268725?text=Hi%20Guru%20Kripa%20Printers,%20I%20want%20to%20inquire%20about%20Flex%20Banner%20printing." target="_blank" class="gallery-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order Similar on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Visiting Card -->
+                <div class="gallery-card">
+                    <img src="images/Visiting card.png" alt="Visiting Card Showcase">
+                    <div class="gallery-card-body">
+                        <h4>Premium Visiting Cards</h4>
+                        <p style="font-size: 13px; color: #64748B;">Gold foil, matte, and velvet finish business cards.</p>
+                        <a href="https://wa.me/919827268725?text=Hi%20Guru%20Kripa%20Printers,%20I%20want%20to%20order/inquire%20about%20Visiting%20Cards." target="_blank" class="gallery-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order Similar on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Branding Material -->
+                <div class="gallery-card">
+                    <img src="images/Branding material.png" alt="Branding Material Artwork">
+                    <div class="gallery-card-body">
+                        <h4>Branding Material</h4>
+                        <p style="font-size: 13px; color: #64748B;">Corporate letterheads, invoice books, and complete business identity solutions.</p>
+                        <a href="https://wa.me/919827268725?text=Hi%20Guru%20Kripa%20Printers,%20I%20need%20Branding%20Materials%20for%20my%20business." target="_blank" class="gallery-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order Similar on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Personalized Gift Printing -->
+                <div class="gallery-card">
+                    <img src="images/Personalized Gift Printing.png" alt="Personalized Gifts">
+                    <div class="gallery-card-body">
+                        <h4>Personalized Gifts</h4>
+                        <p style="font-size: 13px; color: #64748B;">Custom printed coffee mugs, T-shirts, keychains, and photo frames.</p>
+                        <a href="https://wa.me/919827268725?text=Hi%20Guru%20Kripa%20Printers,%20I%20want%20to%20inquire%20about%20Personalized%20Gifts." target="_blank" class="gallery-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order Similar on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Wedding & Event Invitation Cards -->
+                <div class="gallery-card">
+                    <img src="images/Wedding & Event Invitation Cards.png" alt="Wedding Cards">
+                    <div class="gallery-card-body">
+                        <h4>Wedding Cards</h4>
+                        <p style="font-size: 13px; color: #64748B;">Designer invitation suites, royal patterns, and custom event cards.</p>
+                        <a href="https://wa.me/919827268725?text=Hi%20Guru%20Kripa%20Printers,%20I%20want%20to%20inquire%20about%20Wedding%20Cards." target="_blank" class="gallery-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order Similar on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Stickers, Labels & Packaging Boxes -->
+                <div class="gallery-card">
+                    <img src="images/Stickers, Labels & Packaging Boxes.png" alt="Packaging and Stickers">
+                    <div class="gallery-card-body">
+                        <h4>Packaging & Stickers</h4>
+                        <p style="font-size: 13px; color: #64748B;">Custom product boxes, brand labels, and adhesive stickers.</p>
+                        <a href="https://wa.me/919827268725?text=Hi%20Guru%20Kripa%20Printers,%20I%20want%20to%20inquire%20about%20Packaging%20and%20Stickers." target="_blank" class="gallery-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order Similar on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">gk</div>
+                    <div class="logo-text">
+                        <h2>Guru Kripa</h2>
+                        <span>PRINTERS</span>
+                    </div>
+                </a>
+                <p>Your trusted partner for all commercial and creative printing solutions. Quality and precision guaranteed.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+           
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> Bhopal, Madhya Pradesh</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 9827268725</li>
+                    <li><i class="fa-solid fa-envelope"></i> rakeshyagyik77@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
