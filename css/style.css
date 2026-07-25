@@ -644,35 +644,61 @@ a {
         gap: 15px;
     }
 }
-/* Mobile Fix: Desktop layout ko touch kiye bina mobile horizontal overflow ko rokne ke liye */
+/* ==========================================
+   PREMIUM MOBILE RESPONSIVE DESIGN
+   ========================================== */
 @media screen and (max-width: 768px) {
   
-  /* Right scroll hone se rokne ke liye */
+  /* 1. Page & Scroll Control */
   html, body {
     width: 100% !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
   }
 
-  /* All main containers fit within screen */
-  div, header, nav, section, footer, .container, .navbar {
-    max-width: 100% !important;
+  /* 2. Container & Section Margins */
+  section, .container, .wrapper {
+    width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     box-sizing: border-box !important;
   }
 
-  /* Flex items (buttons & logo) vertical/responsive align karne ke liye */
-  .navbar, header {
+  /* 3. Header & Navbar Alignment */
+  header, .navbar {
     display: flex !important;
-    flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
+    padding: 15px 20px !important;
     width: 100% !important;
-    padding: 10px 15px !important;
   }
 
-  /* Buttons, text aur elements overflow na ho */
-  h1, h2, h3, p, button, a {
-    max-width: 100% !important;
-    word-wrap: break-word !important;
+  /* Call Now button size fix for mobile */
+  .call-btn, header button, header a {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+  }
+
+  /* 4. Text Typography Scaling */
+  h1, .hero-title {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+  }
+
+  p, .hero-subtitle {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    opacity: 0.9;
+  }
+
+  /* 5. Feature Badges / Glassmorphism Cards */
+  .feature-card, .pill-btn, .service-item {
+    width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 12px 18px !important;
+    box-sizing: border-box !important;
   }
 }
