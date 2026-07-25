@@ -1,0 +1,209 @@
+/* ==========================================
+   SERVICES PAGE STYLES (Matching style.css)
+   ========================================== */
+
+/* Variables & Base Alignment */
+:root {
+    --primary: #FFC700;
+    --primary-hover: #E5B200;
+    --dark-bg: #070F1E;
+    --dark-card: #0D1B2E;
+    --light-bg: #F8FAFC;
+    --text-white: #FFFFFF;
+    --text-muted: #94A3B8;
+    --text-dark: #0F172A;
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Services Page Header Wrapper */
+.services-page-header {
+    background: var(--dark-bg);
+    padding-top: 140px;
+    padding-bottom: 60px;
+    text-align: center;
+    position: relative;
+}
+
+.services-page-header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--text-white);
+    margin-bottom: 15px;
+}
+
+.services-page-header h1 span {
+    color: var(--primary);
+}
+
+.services-page-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Main Services Section (Light Background Flow matching style.css) */
+.services-section {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    padding: 90px 0;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    z-index: 5;
+}
+
+.container {
+    width: min(92%, 1280px);
+    margin: auto;
+}
+
+/* Section Header */
+.services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.sub-heading {
+    font-size: 13px;
+    font-weight: 800;
+    color: #2563EB;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.services-header h2 {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.services-intro {
+    color: #64748B;
+    font-size: 15px;
+    max-width: 340px;
+    line-height: 1.6;
+}
+
+/* Action Pill Button */
+.btn-dark-pill {
+    background: var(--text-dark);
+    color: var(--text-white);
+    padding: 12px 26px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-dark-pill:hover {
+    background: #1E293B;
+    transform: translateY(-2px);
+}
+
+/* Services Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+/* Individual Card Styling matching style.css #0D1B2E vibe adapted for light sections */
+.service-box {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 32px 26px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(255, 199, 0, 0.6);
+}
+
+/* Service Icon Block */
+.service-icon {
+    width: 52px;
+    height: 52px;
+    background: #FEF3C7;
+    color: #D97706;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 22px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-box:hover .service-icon {
+    background: var(--primary);
+    color: #000000;
+}
+
+/* Card Typography */
+.service-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.service-box p {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Explore Link */
+.explore-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.explore-link:hover {
+    color: #2563EB;
+    gap: 12px;
+}
+
+/* Background Watermark Icon */
+.bg-watermark {
+    position: absolute;
+    right: -15px;
+    bottom: -15px;
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0.02);
+    pointer-events: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-box:hover .bg-watermark {
+    transform: scale(1.1);
+    color: rgba(255, 199, 0, 0.08);
+}
